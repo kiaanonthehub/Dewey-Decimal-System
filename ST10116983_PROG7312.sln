@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dewey_Decimal_System", "Dewey_Decimal_System\Dewey_Decimal_System.csproj", "{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeweyDecimalLibrary", "DeweyDecimalLibrary\DeweyDecimalLibrary.csproj", "{0257F51B-082B-4383-8EB5-415819BF2AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0257F51B-082B-4383-8EB5-415819BF2AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0257F51B-082B-4383-8EB5-415819BF2AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0257F51B-082B-4383-8EB5-415819BF2AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0257F51B-082B-4383-8EB5-415819BF2AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C415CF25-4A0D-4761-8C39-CDBD828A4B3D}
+	EndGlobalSection
+EndGlobal
