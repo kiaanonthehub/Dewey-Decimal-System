@@ -1,0 +1,30 @@
+﻿
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // create json file
+            JsonFileUtilty.CreateJsonFile();
+
+            // retrieve data from json file
+            List<ModelHighScore> lstModelHightScore = JsonFileUtilty.GetAllScores();
+
+            // populate list view
+            lstModelHightScore.OrderByDescending(x=>x.Score)
+                .ToList()
+                .ForEach(x=> lvLeaderboard.Items.Add(new ListViewItem(new string[]{x.Username,x.Score.ToString()})));
+
+        }
+
+
+/*
+    Author  : Gen Grievous [Youtube]
+    Topic   : Windows Forms -ListView add items and read selected
+    Resource: [https://www.youtube.com/watch?v=OAvMTu-LFgs] 
+    Date    : Jun 23, 2017
+ */
+
+/*
+    Author  : Arkadiusz Raszeja [Stackoverflow]
+    Topic   : How to add list items to a ListView in C#winform?
+    Resource: [https://stackoverflow.com/questions/43841962/how-to-add-list-items-to-a-listview-in-cwinform]
+    Date    : May 8, 2017
+ */
