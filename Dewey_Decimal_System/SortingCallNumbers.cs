@@ -88,9 +88,7 @@ namespace Dewey_Decimal_System
                 {
                     // write to json
                     JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
-
                 }
-
             }
         }
 

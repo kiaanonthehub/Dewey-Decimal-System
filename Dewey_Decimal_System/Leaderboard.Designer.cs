@@ -38,9 +38,9 @@
             this.lvLeaderboard.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ch_username,
             this.ch_score});
-            this.lvLeaderboard.Location = new System.Drawing.Point(156, 66);
+            this.lvLeaderboard.Location = new System.Drawing.Point(149, 72);
             this.lvLeaderboard.Name = "lvLeaderboard";
-            this.lvLeaderboard.Size = new System.Drawing.Size(484, 204);
+            this.lvLeaderboard.Size = new System.Drawing.Size(484, 235);
             this.lvLeaderboard.TabIndex = 0;
             this.lvLeaderboard.UseCompatibleStateImageBehavior = false;
             this.lvLeaderboard.View = System.Windows.Forms.View.Details;
@@ -63,6 +63,7 @@
             this.Controls.Add(this.lvLeaderboard);
             this.Name = "frmLeaderboard";
             this.Text = "Leaderboard";
+            this.Load += new System.EventHandler(this.frmLeaderboard_Load);
             this.ResumeLayout(false);
 
         }

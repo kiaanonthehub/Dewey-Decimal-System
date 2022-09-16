@@ -13,5 +13,12 @@ namespace Dewey_Decimal_System
             this.Hide();
             sortingCallNumbers.ShowDialog();
         }
+
+        private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)
+        {
+            frmLeaderboard frmLeaderboard = new frmLeaderboard();
+            this.Hide();
+            frmLeaderboard.ShowDialog();
+        }
     }
 }

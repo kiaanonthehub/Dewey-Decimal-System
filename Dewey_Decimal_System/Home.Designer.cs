@@ -34,7 +34,7 @@
             // 
             // btnSortCallNos
             // 
-            this.btnSortCallNos.Location = new System.Drawing.Point(212, 252);
+            this.btnSortCallNos.Location = new System.Drawing.Point(85, 229);
             this.btnSortCallNos.Name = "btnSortCallNos";
             this.btnSortCallNos.Size = new System.Drawing.Size(137, 51);
             this.btnSortCallNos.TabIndex = 0;
@@ -44,12 +44,13 @@
             // 
             // btnSortCallNosLeaderboard
             // 
-            this.btnSortCallNosLeaderboard.Location = new System.Drawing.Point(212, 309);
+            this.btnSortCallNosLeaderboard.Location = new System.Drawing.Point(85, 286);
             this.btnSortCallNosLeaderboard.Name = "btnSortCallNosLeaderboard";
             this.btnSortCallNosLeaderboard.Size = new System.Drawing.Size(137, 40);
             this.btnSortCallNosLeaderboard.TabIndex = 1;
             this.btnSortCallNosLeaderboard.Text = "Leaderboard";
             this.btnSortCallNosLeaderboard.UseVisualStyleBackColor = true;
+            this.btnSortCallNosLeaderboard.Click += new System.EventHandler(this.btnSortCallNosLeaderboard_Click);
             // 
             // Home
             // 

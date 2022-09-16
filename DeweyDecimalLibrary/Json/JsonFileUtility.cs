@@ -6,6 +6,8 @@ namespace DeweyDecimalLibrary.Json
     public class JsonFileUtility
     {
         public static string SortingCallNosFile = "SortingCallNumbersLeaderboard.json";
+        public static string IdentifyingAreasFile = "IdentifyingAreasLeaderboard.json";
+        public static string FindingCallNosFile = "FindingCallNumbersLeaderboard.json";
 
         // creates the json file
         public static void CreateJsonFile(string filename)
