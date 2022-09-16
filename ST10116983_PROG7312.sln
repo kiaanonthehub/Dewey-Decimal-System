@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dewey_Decimal_System", "Dewey_Decimal_System\Dewey_Decimal_System.csproj", "{B79B9B72-EDD7-486B-B91E-B4A9621E3C6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0257F51B-082B-4383-8EB5-415819BF2AFB} = {0257F51B-082B-4383-8EB5-415819BF2AFB}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeweyDecimalLibrary", "DeweyDecimalLibrary\DeweyDecimalLibrary.csproj", "{0257F51B-082B-4383-8EB5-415819BF2AFB}"
 EndProject

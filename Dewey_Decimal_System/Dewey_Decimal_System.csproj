@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DeweyDecimalLibrary\DeweyDecimalLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

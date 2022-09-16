@@ -21,7 +21,7 @@ namespace DeweyDecimalLibrary.Logic
                 //generate a random number between 1 and 10
                 int pCheck = rnd.Next(1, 11);
 
-                if (pCheck > 8) { period = $".{rnd.Next(1, 1000)}"; }
+                if (pCheck > 4) { period = $".{rnd.Next(1, 100)}"; }
 
                 string author = RandomString(3);
 
@@ -61,5 +61,6 @@ namespace DeweyDecimalLibrary.Logic
             return myList.OrderBy(item => rnd.Next()).ToList();
         }
         #endregion
+
     }
 }

@@ -28,13 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lvLeaderboard = new System.Windows.Forms.ListView();
+            this.ch_username = new System.Windows.Forms.ColumnHeader();
+            this.ch_score = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
+            // 
+            // lvLeaderboard
+            // 
+            this.lvLeaderboard.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ch_username,
+            this.ch_score});
+            this.lvLeaderboard.Location = new System.Drawing.Point(156, 66);
+            this.lvLeaderboard.Name = "lvLeaderboard";
+            this.lvLeaderboard.Size = new System.Drawing.Size(484, 204);
+            this.lvLeaderboard.TabIndex = 0;
+            this.lvLeaderboard.UseCompatibleStateImageBehavior = false;
+            this.lvLeaderboard.View = System.Windows.Forms.View.Details;
+            // 
+            // ch_username
+            // 
+            this.ch_username.Text = "Username";
+            this.ch_username.Width = 240;
+            // 
+            // ch_score
+            // 
+            this.ch_score.Text = "Score";
+            this.ch_score.Width = 240;
             // 
             // frmLeaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lvLeaderboard);
             this.Name = "frmLeaderboard";
             this.Text = "Leaderboard";
             this.ResumeLayout(false);
@@ -42,5 +68,9 @@
         }
 
         #endregion
+
+        private ListView lvLeaderboard;
+        private ColumnHeader ch_username;
+        private ColumnHeader ch_score;
     }
 }
