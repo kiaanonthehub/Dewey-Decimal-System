@@ -26,7 +26,7 @@ namespace Dewey_Decimal_System
 
         private bool _mustStop => (_max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds) < 0;
 
-        public string TimeLeftStr => TimeLeft.ToString(@"ss"+'s');
+        public string TimeLeftStr => TimeLeft.ToString(@"ss");
 
         public string TimeLeftMsStr => TimeLeft.ToString(@"mm\:ss\.fff");
 

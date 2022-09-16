@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\SortingCallNumbersLeaderboard.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DeweyDecimalLibrary\DeweyDecimalLibrary.csproj" />
   </ItemGroup>
 

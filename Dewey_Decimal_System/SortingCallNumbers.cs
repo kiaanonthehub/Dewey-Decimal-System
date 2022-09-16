@@ -1,7 +1,6 @@
-﻿using DeweyDecimalLibrary.Logic;
-using System.Reflection.Emit;
-using System.Windows.Forms;
-using Timer = System.Threading.Timer;
+﻿using DeweyDecimalLibrary.Json;
+using DeweyDecimalLibrary.Logic;
+using DeweyDecimalLibrary.Models;
 
 namespace Dewey_Decimal_System
 {
@@ -18,7 +17,7 @@ namespace Dewey_Decimal_System
         // properties
         public bool gameBegin { get; set; } = false;
         public bool gameEnd { get; set; } = false;
-      
+
         public frmSortingCallNumbers()
         {
             InitializeComponent();
@@ -48,7 +47,14 @@ namespace Dewey_Decimal_System
         #region Drag and Drop 
         private void lstboxRandom_MouseDown(object sender, MouseEventArgs e)
         {
-            lstboxSorted.DoDragDrop(lstboxRandom.SelectedItem.ToString(), DragDropEffects.Copy);
+            try
+            {
+                lstboxSorted.DoDragDrop(lstboxRandom.SelectedItem.ToString(), DragDropEffects.Copy);
+            }
+            catch (System.NullReferenceException ex)
+            {
+                MessageBox.Show("Please select a call number from the list");
+            }
 
             if (StartGame())
             {
@@ -59,6 +65,32 @@ namespace Dewey_Decimal_System
             if (EndGame())
             {
                 MessageBox.Show("Game Completed");
+
+
+                // instantiate high score model 
+                ModelHighScore modelHighScore = new ModelHighScore();
+
+                // score
+                modelHighScore.Score = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+
+                modelHighScore.Username = "Player2022";
+
+                // check if the json file exists
+                if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
+                {
+                    // create the json file
+                    JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
+
+                    // write data to the file
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                }
+                else
+                {
+                    // write to json
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+
+                }
+
             }
         }
 
@@ -107,18 +139,15 @@ namespace Dewey_Decimal_System
             //update label text
             timer.TimeChanged += () => lblCountdownEdit.Text = timer.TimeLeftMsStr;
 
-            // show messageBox on timer = 00:00.000
-            timer.CountDownFinished += () => MessageBox.Show("Your time is up!");
-
             //timer step. By default is 1 second
-            timer.StepMs = 77; 
+            timer.StepMs = 77;
         }
         #endregion
 
         #region End Game
-        public bool EndGame() 
+        public bool EndGame()
         {
-            if (lstboxSorted.Items.Count == 10)
+            if (lstboxSorted.Items.Count == 10 || timer.TimeLeft.Seconds.Equals(0))
             {
                 gameEnd = true;
 

@@ -1,19 +1,14 @@
 ﻿using DeweyDecimalLibrary.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace DeweyDecimalLibrary.Json
 {
     public class JsonFileUtility
     {
-        private const string filename = "Highscore.json";
+        public static string SortingCallNosFile = "SortingCallNumbersLeaderboard.json";
 
         // creates the json file
-        public static void CreateJsonFile()
+        public static void CreateJsonFile(string filename)
         {
             // initialised list with pre populated data
             List<ModelHighScore> initializeHighScore = new List<ModelHighScore>()
@@ -28,9 +23,9 @@ namespace DeweyDecimalLibrary.Json
         }
 
         // appends data to existing json file
-        public static void AppendScores(ModelHighScore highScore)
+        public static void AppendScores(ModelHighScore highScore , string filename)
         {
-            List<ModelHighScore> lstHighScore = GetAllScores();
+            List<ModelHighScore> lstHighScore = GetAllScores(filename);
 
             lstHighScore.Add(highScore);
 
@@ -38,9 +33,20 @@ namespace DeweyDecimalLibrary.Json
         }
 
         // returns all existing score in json file
-        public static List<ModelHighScore> GetAllScores()
+        public static List<ModelHighScore> GetAllScores(string filename)
         {
             return JsonSerializer.Deserialize<List<ModelHighScore>>(File.ReadAllText(filename));
+        }
+        public static bool FileExists(string fileName)
+        {
+            if (File.Exists(fileName))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
