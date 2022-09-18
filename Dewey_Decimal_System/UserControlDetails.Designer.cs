@@ -79,6 +79,7 @@
             this.btnPlayAgain.TabIndex = 3;
             this.btnPlayAgain.Text = "Play Again!";
             this.btnPlayAgain.UseVisualStyleBackColor = true;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // btnSaveScore
             // 
@@ -88,6 +89,7 @@
             this.btnSaveScore.TabIndex = 4;
             this.btnSaveScore.Text = "Save Score";
             this.btnSaveScore.UseVisualStyleBackColor = true;
+            this.btnSaveScore.Click += new System.EventHandler(this.btnSaveScore_Click);
             // 
             // textBox1
             // 

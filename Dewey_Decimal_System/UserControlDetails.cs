@@ -16,5 +16,15 @@ namespace Dewey_Decimal_System
         {
             InitializeComponent();
         }
+
+        private void btnSaveScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlayAgain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
