@@ -22,9 +22,9 @@ namespace Dewey_Decimal_System
 
         private TimeSpan _max = TimeSpan.FromMilliseconds(30000);
 
-        public TimeSpan TimeLeft => (_max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds) > 0 ? TimeSpan.FromMilliseconds(_max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds) : TimeSpan.FromMilliseconds(0);
+        public TimeSpan TimeLeft => _max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds > 0 ? TimeSpan.FromMilliseconds(_max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds) : TimeSpan.FromMilliseconds(0);
 
-        private bool _mustStop => (_max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds) < 0;
+        private bool _mustStop => _max.TotalMilliseconds - _stpWatch.ElapsedMilliseconds < 0;
 
         public string TimeLeftStr => TimeLeft.ToString(@"ss");
 
