@@ -52,6 +52,7 @@
             this.btnEasy.Text = "Take It Easy On Me 😊";
             this.toolTipMode1.SetToolTip(this.btnEasy, "Double click on the button to select the easy difficulty mode.");
             this.btnEasy.UseVisualStyleBackColor = false;
+            this.btnEasy.Click += new System.EventHandler(this.btnEasy_Click);
             // 
             // btnMed
             // 
@@ -67,6 +68,7 @@
             this.btnMed.Text = "I Think I Got This  😮‍💨";
             this.toolTipMode2.SetToolTip(this.btnMed, "Double click on the button to select the medium difficulty mode.");
             this.btnMed.UseVisualStyleBackColor = false;
+            this.btnMed.Click += new System.EventHandler(this.btnMed_Click);
             // 
             // btnHard
             // 
@@ -82,6 +84,7 @@
             this.btnHard.Text = "Challenge Me, I Dare You  😱";
             this.toolTipMode3.SetToolTip(this.btnHard, "Double click on the button to select the hard difficulty mode.");
             this.btnHard.UseVisualStyleBackColor = false;
+            this.btnHard.Click += new System.EventHandler(this.btnHard_Click);
             // 
             // label1
             // 

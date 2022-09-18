@@ -1,3 +1,5 @@
+using DeweyDecimalLibrary.Other;
+
 namespace Dewey_Decimal_System
 {
     public partial class Home : Form
@@ -9,13 +11,12 @@ namespace Dewey_Decimal_System
 
         private void btnSortCallNos_Click(object sender, EventArgs e)
         {
-            //frmSortingCallNumbers sortingCallNumbers = new frmSortingCallNumbers();
-            //this.Hide();
-            //sortingCallNumbers.ShowDialog();
-
+            Global.SortCallingNos = true;
+            
             frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
             this.Hide();
             frmDifficultyLevel.ShowDialog();
+
         }
 
         private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)

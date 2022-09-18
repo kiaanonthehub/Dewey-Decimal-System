@@ -18,7 +18,7 @@
     <None Remove="bin\**" />
     <None Remove="obj\**" />
     <None Remove="Properties\**" />
-  </ItemGroup>
+  </ItemGroup> 
 
   <ItemGroup>
     <ProjectReference Include="..\DeweyDecimalLibrary\DeweyDecimalLibrary.csproj" />

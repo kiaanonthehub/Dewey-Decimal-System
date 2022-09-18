@@ -82,7 +82,7 @@
             this.lblCountdownEdit.Name = "lblCountdownEdit";
             this.lblCountdownEdit.Size = new System.Drawing.Size(44, 19);
             this.lblCountdownEdit.TabIndex = 4;
-            this.lblCountdownEdit.Text = "30:00";
+            this.lblCountdownEdit.Text = "00:00";
             // 
             // lblScoreEdit
             // 
@@ -106,6 +106,7 @@
             this.Controls.Add(this.lstboxRandom);
             this.Name = "frmSortingCallNumbers";
             this.Text = "SortingCallNumbers";
+            this.Load += new System.EventHandler(this.frmSortingCallNumbers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

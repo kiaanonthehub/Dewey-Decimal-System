@@ -1,6 +1,7 @@
 ﻿using DeweyDecimalLibrary.Json;
 using DeweyDecimalLibrary.Logic;
 using DeweyDecimalLibrary.Models;
+using DeweyDecimalLibrary.Other;
 
 namespace Dewey_Decimal_System
 {
@@ -129,8 +130,8 @@ namespace Dewey_Decimal_System
         #region Start Timer
         public void StartTimer()
         {
-            //set to 30 seconds
-            timer.SetTime(0, 30);
+            //set time dependent on difficulty 
+            timer.SetTime(0, Global.CountdownTime);
 
             timer.Start();
 
@@ -160,5 +161,10 @@ namespace Dewey_Decimal_System
         }
         #endregion
 
+        private void frmSortingCallNumbers_Load(object sender, EventArgs e)
+        {
+            // set time on ui
+            lblCountdownEdit.Text = Global.CountdownTime.ToString();
+        }
     }
 }
