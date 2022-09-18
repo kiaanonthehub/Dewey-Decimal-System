@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="bin\Debug\net6.0-windows\SortingCallNumbersLeaderboard.json" />
+    <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+    <None Remove="Properties\**" />
   </ItemGroup>
 
   <ItemGroup>
