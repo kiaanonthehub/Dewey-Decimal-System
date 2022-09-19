@@ -1,6 +1,4 @@
-﻿using DeweyDecimalLibrary.Json;
-using DeweyDecimalLibrary.Logic;
-using DeweyDecimalLibrary.Models;
+﻿using DeweyDecimalLibrary.Logic;
 using DeweyDecimalLibrary.Other;
 
 namespace Dewey_Decimal_System
@@ -65,31 +63,17 @@ namespace Dewey_Decimal_System
 
             if (EndGame())
             {
-                MessageBox.Show("Game Completed");
+                // save the score 
+                Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+
+                Global.UpdateUserControl = true;
+
+                // show user details and score
+                ScoreAndDetails scoreAndDetails = new ScoreAndDetails();
+                this.Hide();
+                scoreAndDetails.Show();
 
 
-                // instantiate high score model 
-                ModelHighScore modelHighScore = new ModelHighScore();
-
-                // score
-                modelHighScore.Score = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
-
-                modelHighScore.Username = "Player2022";
-
-                // check if the json file exists
-                if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
-                {
-                    // create the json file
-                    JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
-
-                    // write data to the file
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
-                }
-                else
-                {
-                    // write to json
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
-                }
             }
         }
 
@@ -146,12 +130,13 @@ namespace Dewey_Decimal_System
         #region End Game
         public bool EndGame()
         {
-            if (lstboxSorted.Items.Count == 10 || timer.TimeLeft.Seconds.Equals(0))
+            if ((lstboxSorted.Items.Count.Equals(10) && lstboxRandom.Items.Count.Equals(0)) || Convert.ToInt32(timer.TimeLeftStr) == 0)
             {
-                gameEnd = true;
 
                 timer.Pause();
                 lblCountdownEdit.Text = timer.TimeLeftStr;
+
+                gameEnd = true;
             }
             else
             {

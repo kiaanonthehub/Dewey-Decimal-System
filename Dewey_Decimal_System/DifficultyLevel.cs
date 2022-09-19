@@ -20,7 +20,7 @@ namespace Dewey_Decimal_System
 
         private void DifficultyLevel_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         #region Select Difficulty
@@ -36,12 +36,16 @@ namespace Dewey_Decimal_System
         {
             Global.CountdownTime = 45;
             Global.BonusPoints = 25;
+
+            NavigateToGame();
         }
 
         private void btnHard_Click(object sender, EventArgs e)
         {
             Global.CountdownTime = 30;
             Global.BonusPoints = 50;
+
+            NavigateToGame();
         }
         #endregion
 
