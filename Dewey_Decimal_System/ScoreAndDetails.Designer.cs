@@ -36,7 +36,7 @@
             this.txbBonus = new System.Windows.Forms.TextBox();
             this.btnSaveScore = new System.Windows.Forms.Button();
             this.btnPlayAgain = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUserMessage = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -128,15 +128,15 @@
             this.btnPlayAgain.UseVisualStyleBackColor = false;
             this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
-            // label2
+            // lblUserMessage
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(103, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(603, 42);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Congratulation ,  You completed the game!";
+            this.lblUserMessage.AutoSize = true;
+            this.lblUserMessage.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUserMessage.Location = new System.Drawing.Point(103, 24);
+            this.lblUserMessage.Name = "lblUserMessage";
+            this.lblUserMessage.Size = new System.Drawing.Size(197, 42);
+            this.lblUserMessage.TabIndex = 14;
+            this.lblUserMessage.Text = "User Message";
             // 
             // label1
             // 
@@ -194,7 +194,7 @@
             this.Controls.Add(this.txbBonus);
             this.Controls.Add(this.btnSaveScore);
             this.Controls.Add(this.btnPlayAgain);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblUserMessage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbUsername);
             this.Name = "ScoreAndDetails";
@@ -215,7 +215,7 @@
         private TextBox txbBonus;
         private Button btnSaveScore;
         private Button btnPlayAgain;
-        private Label label2;
+        private Label lblUserMessage;
         private Label label1;
         private TextBox txbUsername;
         private Label label6;

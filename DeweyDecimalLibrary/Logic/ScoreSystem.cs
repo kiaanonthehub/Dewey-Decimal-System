@@ -8,25 +8,25 @@
             int timeCompleted = 30 - timeLeft, score = 0;
 
             // logic structure of points system
-            if (timeCompleted < 9)
+            if (timeCompleted < 10)
             {
-                score = 10;
+                score = 100;
             }
             else if (timeCompleted >= 10 || timeCompleted <= 15)
             {
-                score = 8;
+                score = 75;
             }
             else if (timeCompleted >= 16 || timeCompleted <= 21)
             {
-                score = 6;
+                score = 50;
             }
             else if (timeCompleted >= 22 || timeCompleted <= 25)
             {
-                score = 3;
+                score = 25;
             }
             else if (timeCompleted > 26)
             {
-                score = 1;
+                score = 10;
             }
 
             return score;

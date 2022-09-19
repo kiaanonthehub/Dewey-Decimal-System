@@ -15,9 +15,11 @@ namespace Dewey_Decimal_System
 {
     public partial class ScoreAndDetails : Form
     {
-        public ScoreAndDetails()
+        public ScoreAndDetails(string info)
         {
             InitializeComponent();
+
+            lblUserMessage.Text = info;
         }
 
         private void ScoreAndDetails_Load(object sender, EventArgs e)

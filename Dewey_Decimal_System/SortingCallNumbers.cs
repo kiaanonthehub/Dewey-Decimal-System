@@ -15,7 +15,6 @@ namespace Dewey_Decimal_System
 
         // properties
         public bool gameBegin { get; set; } = false;
-        public bool gameEnd { get; set; } = false;
 
         public frmSortingCallNumbers()
         {
@@ -63,17 +62,36 @@ namespace Dewey_Decimal_System
 
             if (EndGame())
             {
-                // save the score 
-                Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+                // get the data of the users from the list box
+                userList = lstboxSorted.Items.Cast<String>().ToList();
 
-                Global.UpdateUserControl = true;
+                bool isCorrectAnswer = userList.SequenceEqual(sortedList);
 
-                // show user details and score
-                ScoreAndDetails scoreAndDetails = new ScoreAndDetails();
-                this.Hide();
-                scoreAndDetails.Show();
+                if (isCorrectAnswer)
+                {
+                    // save the score 
+                    Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
 
+                    Global.UpdateUserControl = true;
 
+                    // show user details and score
+                    ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Congratulations! You Solved Correctly 👑 ");
+                    this.Hide();
+                    scoreAndDetails.Show();
+                }
+                else
+                {
+                    // incorrect sorting
+                    Global.Points = 0;
+
+                    Global.UpdateUserControl = true;
+
+                    // show user details and score
+                    ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Unlucky! You Solved Incorrectly 😢 ");
+                    this.Hide();
+                    scoreAndDetails.Show();
+
+                }
             }
         }
 
@@ -132,17 +150,15 @@ namespace Dewey_Decimal_System
         {
             if ((lstboxSorted.Items.Count.Equals(10) && lstboxRandom.Items.Count.Equals(0)) || Convert.ToInt32(timer.TimeLeftStr) == 0)
             {
-
                 timer.Pause();
                 lblCountdownEdit.Text = timer.TimeLeftStr;
 
-                gameEnd = true;
+                return true;
             }
             else
             {
-                gameEnd = false;
+                return false;
             }
-            return gameEnd;
         }
         #endregion
 
