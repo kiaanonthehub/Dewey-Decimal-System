@@ -67,5 +67,13 @@ namespace Dewey_Decimal_System
                 // Game 3
             }
         }
+
+        private void frmDifficultyLevel_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // navigate back to the homescreen
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }

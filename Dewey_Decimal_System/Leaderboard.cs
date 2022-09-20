@@ -59,6 +59,14 @@ namespace Dewey_Decimal_System
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
             }
         }
+
+        private void frmLeaderboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // navigate back to the homescreen
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }
 /*

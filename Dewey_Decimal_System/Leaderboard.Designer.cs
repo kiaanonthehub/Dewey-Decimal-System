@@ -82,6 +82,7 @@
             this.Name = "frmLeaderboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leaderboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLeaderboard_FormClosed);
             this.Load += new System.EventHandler(this.frmLeaderboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

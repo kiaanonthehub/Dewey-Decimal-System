@@ -166,5 +166,12 @@ namespace Dewey_Decimal_System
             // set time on ui
             lblCountdownEdit.Text = Global.CountdownTime.ToString();
         }
+
+        private void frmSortingCallNumbers_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            frmLeaderboard leaderboard = new frmLeaderboard();
+            leaderboard.Show();
+        }
     }
 }

@@ -89,34 +89,18 @@ namespace Dewey_Decimal_System
             // navigate back to the home screen
             RefreshUI();
 
+            // back to home page
             Home home = new Home();
             this.Hide();
             home.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void ScoreAndDetails_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            // navigate back to the homescreen
+            this.Hide();
+            Home home = new Home();
+            home.Show();
         }
     }
 }
