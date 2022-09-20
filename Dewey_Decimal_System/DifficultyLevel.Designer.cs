@@ -127,6 +127,7 @@
             this.Controls.Add(this.btnMed);
             this.Controls.Add(this.btnEasy);
             this.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmDifficultyLevel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -26,9 +26,5 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="Game1\" />
-  </ItemGroup>
 
 </Project>

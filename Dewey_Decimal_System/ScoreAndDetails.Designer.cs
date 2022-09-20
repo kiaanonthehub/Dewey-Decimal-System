@@ -54,7 +54,6 @@
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Final Score:";
-           // this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -66,7 +65,6 @@
             this.label4.Size = new System.Drawing.Size(108, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Bonus Points:";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -78,7 +76,6 @@
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Your Score: ";
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txbFinalScore
             // 
@@ -173,7 +170,6 @@
             this.label6.Size = new System.Drawing.Size(31, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "OR";
-           // this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -205,6 +201,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbUsername);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ScoreAndDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScoreAndDetails";

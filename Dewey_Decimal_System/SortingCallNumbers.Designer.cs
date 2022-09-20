@@ -92,9 +92,10 @@
             this.Controls.Add(this.lblCountdown);
             this.Controls.Add(this.lstboxSorted);
             this.Controls.Add(this.lstboxRandom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmSortingCallNumbers";
             this.Text = "SortingCallNumbers";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSortingCallNumbers_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSortingCallNumbers_FormClosed);
             this.Load += new System.EventHandler(this.frmSortingCallNumbers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -52,6 +52,7 @@ namespace Dewey_Decimal_System
             catch (System.NullReferenceException ex)
             {
                 MessageBox.Show("Please select a call number from the list");
+                throw ex;
             }
 
             if (StartGame())
@@ -83,6 +84,7 @@ namespace Dewey_Decimal_System
                 {
                     // incorrect sorting
                     Global.Points = 0;
+                    Global.BonusPoints = 0;
 
                     Global.UpdateUserControl = true;
 
@@ -167,11 +169,12 @@ namespace Dewey_Decimal_System
             lblCountdownEdit.Text = Global.CountdownTime.ToString();
         }
 
-        private void frmSortingCallNumbers_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmSortingCallNumbers_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // navigate back
             this.Hide();
-            frmLeaderboard leaderboard = new frmLeaderboard();
-            leaderboard.Show();
+            frmDifficultyLevel difficultyLevel = new frmDifficultyLevel();
+            difficultyLevel.Show();
         }
     }
 }
