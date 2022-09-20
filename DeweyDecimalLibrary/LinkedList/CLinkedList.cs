@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace DeweyDecimalLibrary.LinkedList
 {
@@ -244,12 +239,9 @@ namespace DeweyDecimalLibrary.LinkedList
             return node;
         }
 
-        /* Considers last element as pivot,
-        places the pivot element at its
-        correct position in a sorted array,
-        and places all smaller (smaller than
-        pivot) to left of pivot and all
-        greater elements to right of pivot */
+        /* Considers last element as pivot, places the pivot element at its correct position in a sorted array,
+         and places all smaller (smaller than pivot) to left of pivot and all greater elements to right of pivot 
+        */
         private Node<T> Partition(Node<T> last, Node<T> head)
         {
             // set pivot as h element
@@ -294,10 +286,6 @@ namespace DeweyDecimalLibrary.LinkedList
 
         // The main function to sort a linked list.
         // It mainly calls _quickSort()
-        /// <summary>
-        /// Sorts the Linked List in ascending order
-        /// </summary>
-        /// <param name="node"></param>
         public void QuickSort(Node<T> node)
         {
             // Find last node

@@ -64,7 +64,7 @@ namespace Dewey_Decimal_System
             ModelHighScore modelHighScore = new ModelHighScore();
 
             // score
-            modelHighScore.Score = Global.Points;
+            modelHighScore.Score = Global.Points + Global.BonusPoints;
 
             modelHighScore.Username = Global.Username;
 

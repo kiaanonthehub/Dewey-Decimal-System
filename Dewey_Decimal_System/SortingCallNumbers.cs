@@ -117,15 +117,14 @@ namespace Dewey_Decimal_System
         #region Start Game
         public bool StartGame()
         {
-            if (lstboxSorted.Items.Count == 1)
+            if (lstboxSorted.Items.Count > 0 || lstboxRandom.Items.Count < 10)
             {
-                gameBegin = true;
+                return true;
             }
             else
             {
-                gameBegin = false;
+                return false;
             }
-            return gameBegin;
         }
         #endregion
 
@@ -148,7 +147,7 @@ namespace Dewey_Decimal_System
         #region End Game
         public bool EndGame()
         {
-            if ((lstboxSorted.Items.Count.Equals(10) && lstboxRandom.Items.Count.Equals(0)) || Convert.ToInt32(timer.TimeLeftStr) == 0)
+            if ((lstboxSorted.Items.Count.Equals(10) || lstboxRandom.Items.Count.Equals(0)))
             {
                 timer.Pause();
                 lblCountdownEdit.Text = timer.TimeLeftStr;

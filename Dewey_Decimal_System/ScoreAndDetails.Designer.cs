@@ -93,7 +93,7 @@
             // txbScore
             // 
             this.txbScore.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txbScore.Location = new System.Drawing.Point(198, 117);
+            this.txbScore.Location = new System.Drawing.Point(198, 115);
             this.txbScore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbScore.Name = "txbScore";
             this.txbScore.ReadOnly = true;
@@ -113,7 +113,7 @@
             // btnSaveScore
             // 
             this.btnSaveScore.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnSaveScore.Location = new System.Drawing.Point(433, 314);
+            this.btnSaveScore.Location = new System.Drawing.Point(435, 186);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(151, 38);
             this.btnSaveScore.TabIndex = 16;
@@ -124,9 +124,9 @@
             // btnPlayAgain
             // 
             this.btnPlayAgain.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnPlayAgain.Location = new System.Drawing.Point(433, 169);
+            this.btnPlayAgain.Location = new System.Drawing.Point(428, 283);
             this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(151, 38);
+            this.btnPlayAgain.Size = new System.Drawing.Size(158, 38);
             this.btnPlayAgain.TabIndex = 15;
             this.btnPlayAgain.Text = "Play Again!";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(198, 290);
+            this.label1.Location = new System.Drawing.Point(198, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
@@ -157,7 +157,7 @@
             // txbUsername
             // 
             this.txbUsername.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbUsername.Location = new System.Drawing.Point(198, 314);
+            this.txbUsername.Location = new System.Drawing.Point(198, 186);
             this.txbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(241, 38);
@@ -179,7 +179,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(205, 169);
+            this.label7.Location = new System.Drawing.Point(205, 283);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(222, 35);
             this.label7.TabIndex = 25;
