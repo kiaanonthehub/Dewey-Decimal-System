@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDifficultyLevel));
             this.btnEasy = new System.Windows.Forms.Button();
             this.btnMed = new System.Windows.Forms.Button();
             this.btnHard = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.btnEasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEasy.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEasy.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEasy.Location = new System.Drawing.Point(280, 191);
+            this.btnEasy.Location = new System.Drawing.Point(223, 197);
             this.btnEasy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEasy.Name = "btnEasy";
             this.btnEasy.Size = new System.Drawing.Size(329, 48);
@@ -60,7 +61,7 @@
             this.btnMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMed.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnMed.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMed.Location = new System.Drawing.Point(280, 244);
+            this.btnMed.Location = new System.Drawing.Point(223, 260);
             this.btnMed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMed.Name = "btnMed";
             this.btnMed.Size = new System.Drawing.Size(329, 48);
@@ -76,7 +77,7 @@
             this.btnHard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHard.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnHard.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHard.Location = new System.Drawing.Point(280, 297);
+            this.btnHard.Location = new System.Drawing.Point(223, 326);
             this.btnHard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHard.Name = "btnHard";
             this.btnHard.Size = new System.Drawing.Size(329, 48);
@@ -90,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(249, 125);
+            this.label1.Location = new System.Drawing.Point(192, 131);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 44);
@@ -119,7 +120,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHard);
             this.Controls.Add(this.btnMed);
@@ -127,6 +129,7 @@
             this.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmDifficultyLevel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DifficultyLevel";
             this.Load += new System.EventHandler(this.DifficultyLevel_Load);
             this.ResumeLayout(false);

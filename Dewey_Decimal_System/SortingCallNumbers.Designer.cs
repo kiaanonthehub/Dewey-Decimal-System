@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSortingCallNumbers));
             this.lstboxRandom = new System.Windows.Forms.ListBox();
             this.lstboxSorted = new System.Windows.Forms.ListBox();
             this.lblCountdown = new System.Windows.Forms.Label();
@@ -60,7 +61,9 @@
             // lblCountdown
             // 
             this.lblCountdown.AutoSize = true;
+            this.lblCountdown.BackColor = System.Drawing.Color.Black;
             this.lblCountdown.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCountdown.ForeColor = System.Drawing.Color.Transparent;
             this.lblCountdown.Location = new System.Drawing.Point(157, 71);
             this.lblCountdown.Name = "lblCountdown";
             this.lblCountdown.Size = new System.Drawing.Size(141, 34);
@@ -70,7 +73,9 @@
             // lblCountdownEdit
             // 
             this.lblCountdownEdit.AutoSize = true;
+            this.lblCountdownEdit.BackColor = System.Drawing.Color.Black;
             this.lblCountdownEdit.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCountdownEdit.ForeColor = System.Drawing.Color.Transparent;
             this.lblCountdownEdit.Location = new System.Drawing.Point(457, 71);
             this.lblCountdownEdit.Name = "lblCountdownEdit";
             this.lblCountdownEdit.Size = new System.Drawing.Size(102, 34);
@@ -81,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblCountdownEdit);
             this.Controls.Add(this.lblCountdown);
