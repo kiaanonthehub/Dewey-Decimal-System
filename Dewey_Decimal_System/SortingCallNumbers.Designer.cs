@@ -93,6 +93,7 @@
             this.Controls.Add(this.lstboxSorted);
             this.Controls.Add(this.lstboxRandom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmSortingCallNumbers";
             this.Text = "SortingCallNumbers";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSortingCallNumbers_FormClosed);
