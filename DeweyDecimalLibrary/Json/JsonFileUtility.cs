@@ -21,12 +21,13 @@ namespace DeweyDecimalLibrary.Json
             List<ModelHighScore> initializeHighScore = new List<ModelHighScore>()
             {
                 new ModelHighScore( "Kiaan",     rnd.Next(1, 101)),
+                new ModelHighScore( "Dhiya",     rnd.Next(1, 101)),
                 new ModelHighScore( "Ebrahim",   rnd.Next(1, 101)),
                 new ModelHighScore( "Trent",     rnd.Next(1, 101)),
+                new ModelHighScore( "Sarina",    rnd.Next(1, 101)),
                 new ModelHighScore( "Tyrese",    rnd.Next(1, 101)),
                 new ModelHighScore( "Abdullah",  rnd.Next(1, 101)),
                 new ModelHighScore( "Tyler",     rnd.Next(1, 101)),
-                new ModelHighScore( "Dhiya",     rnd.Next(1, 101))
             };
 
             File.WriteAllText(filename, JsonSerializer.Serialize(initializeHighScore));

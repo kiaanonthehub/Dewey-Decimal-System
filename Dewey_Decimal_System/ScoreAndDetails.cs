@@ -48,7 +48,9 @@ namespace Dewey_Decimal_System
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
+
             // load screen again 
+            this.Hide();
             frmSortingCallNumbers frmSortingCallNumbers = new frmSortingCallNumbers();
             frmSortingCallNumbers.ShowDialog();
             this.Hide();

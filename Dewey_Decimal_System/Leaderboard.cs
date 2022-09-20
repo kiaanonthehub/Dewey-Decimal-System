@@ -15,6 +15,13 @@ namespace Dewey_Decimal_System
         {
             bool Game1 = true, Game2 = false, Game3 = false;
 
+            // check if the json file exists
+            if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
+            {
+                // create the json file
+                JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
+            }
+
             if (Game1)
             {
                 lvLeaderboard.Items.Clear();
