@@ -8,11 +8,17 @@ namespace DeweyDecimalLibrary.Logic
         #region Generate Game Call Numbers
         public List<string> GenerateCallNos()
         {
+            // declare varibales
             string period = "";
+
+            // instantiate random obj
             Random rnd = new Random();
+
+            // declare and initalise list and linked list
             CLinkedList<BookModel> books = new CLinkedList<BookModel>();
             List<string> callnums = new List<string>();
 
+            // loop
             for (int i = 0; i < 10; i++)
             {
                 //generate a random number 1 >= n <= 999
@@ -30,10 +36,13 @@ namespace DeweyDecimalLibrary.Logic
                 books.Append(b);
             }
 
+            // adds the current obj to the head of the single linked list
             books.QuickSort(books.Head);
 
+            // iterate through linked list
             foreach (BookModel book in books)
             {
+                // add to 
                 callnums.Add(book.CallNumber);
             }
 
@@ -44,6 +53,7 @@ namespace DeweyDecimalLibrary.Logic
         #region Generate Random String
         public string RandomString(int size)
         {
+            // instantiate random obj
             Random rnd = new Random();
 
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -56,6 +66,7 @@ namespace DeweyDecimalLibrary.Logic
 
         public List<string> ShuffleList(List<string> myList)
         {
+            // instantiate random obj
             Random rnd = new Random();
 
             return myList.OrderBy(item => rnd.Next()).ToList();

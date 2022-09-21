@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace DeweyDecimalLibrary.Models
 {
+    // obj model 
     public class BookModel : IComparable<BookModel>
     {
+        // property
         public string CallNumber { get; set; }
 
+        // constructor
         public BookModel(string callNumber)
         {
             CallNumber = callNumber;
-        }
-
-        public int CompareTo(BookModel other)
-        {
-            return CallNumber.CompareTo(other.CallNumber);
         }
     }
 }

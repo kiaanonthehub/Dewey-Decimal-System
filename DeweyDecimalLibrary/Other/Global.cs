@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DeweyDecimalLibrary.Other
 {
+    // global class that contains properties which can be accessed throughout the 
     public static class Global
     {
         public static int CountdownTime { get; set; } = 60;
