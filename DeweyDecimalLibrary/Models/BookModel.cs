@@ -17,5 +17,11 @@ namespace DeweyDecimalLibrary.Models
         {
             CallNumber = callNumber;
         }
+
+        // implementation
+        public int CompareTo(BookModel other)
+        {
+            return this.CallNumber.CompareTo(other.CallNumber);
+        }
     }
 }
