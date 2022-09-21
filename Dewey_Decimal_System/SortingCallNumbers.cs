@@ -18,6 +18,19 @@ namespace Dewey_Decimal_System
 
         public frmSortingCallNumbers()
         {
+            MessageBox.Show(null,
+                "SORT IN ASCENDING ORDER (Smallest to Biggest)\n" +
+                "----------------------------------------------------------\n" +
+                "To start the game, \n\n" +
+                "1. Click on any Call number (eg. 222.97 JAM) \n" +
+                "   and drag it over to the next list box (blank white box).\n\n" +
+                "2. Once the first call number is entered, the timer will begin and\n" +
+                "   the game will continue, until all the numbers have been moved.\n" +
+                "   The the game will then come to an end.\n\n" +
+                "Remember, you're working against the timer.\n\n" +
+                "-----------------------------------------------------\n" +
+                "GOODLUCK!","Instructions", MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             InitializeComponent();
             lstboxRandom.AllowDrop = true;
             lstboxSorted.AllowDrop = true;
