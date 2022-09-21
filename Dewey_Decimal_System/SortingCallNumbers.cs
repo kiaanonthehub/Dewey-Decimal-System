@@ -30,7 +30,7 @@ namespace Dewey_Decimal_System
                 "   The the game will then come to an end.\n\n" +
                 "Remember, you're working against the timer.\n\n" +
                 "-----------------------------------------------------\n" +
-                "GOODLUCK!","Instructions", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                "GOODLUCK!", "Instructions", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             InitializeComponent();
             lstboxRandom.AllowDrop = true;
@@ -192,6 +192,32 @@ namespace Dewey_Decimal_System
             this.Hide();
             frmDifficultyLevel difficultyLevel = new frmDifficultyLevel();
             difficultyLevel.Show();
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            int index = lstboxSorted.SelectedIndex;
+            string selected = lstboxSorted.SelectedItem.ToString();
+
+            if (index > 0)
+            {
+                lstboxSorted.Items.RemoveAt(index);
+                lstboxSorted.Items.Insert(index - 1, selected);
+                lstboxSorted.SetSelected(index - 1, true);
+            }
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            int index = lstboxSorted.SelectedIndex;
+            string selected = lstboxSorted.SelectedItem.ToString();
+
+            if (index < lstboxSorted.Items.Count-1)
+            {
+                lstboxSorted.Items.RemoveAt(index);
+                lstboxSorted.Items.Insert(index + 1, selected);
+                lstboxSorted.SetSelected(index + 1, true);
+            }
         }
     }
 }
