@@ -18,6 +18,7 @@ namespace Dewey_Decimal_System
 
         public frmSortingCallNumbers()
         {
+            // display instructions to the user
             MessageBox.Show(null,
                 "SORT IN ASCENDING ORDER (Smallest to Biggest)\n" +
                 "----------------------------------------------------------\n" +
@@ -42,12 +43,15 @@ namespace Dewey_Decimal_System
         // method to populate list box with randomly generated call numbers
         public void LoadCallNos()
         {
+            // clear the component
             lstboxRandom.Items.Clear();
 
+            // shuffle the list and store to the updated lists
             ReplacingTheBooks r = new ReplacingTheBooks();
             sortedList = r.GenerateCallNos();
             shuffleList = r.ShuffleList(sortedList);
 
+            // iterate through list and populate the list box
             foreach (var callNo in shuffleList)
             {
                 lstboxRandom.Items.Add(callNo);

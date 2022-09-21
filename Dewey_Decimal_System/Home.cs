@@ -15,6 +15,7 @@ namespace Dewey_Decimal_System
         {
             Global.SortCallingNos = true;
             
+            // form navigation
             frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
             this.Hide();
             frmDifficultyLevel.ShowDialog();
@@ -23,6 +24,7 @@ namespace Dewey_Decimal_System
 
         private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)
         {
+            // form navigation
             frmLeaderboard frmLeaderboard = new frmLeaderboard();
             this.Hide();
             frmLeaderboard.ShowDialog();

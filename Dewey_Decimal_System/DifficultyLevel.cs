@@ -26,6 +26,7 @@ namespace Dewey_Decimal_System
         #region Select Difficulty
         private void btnEasy_Click(object sender, EventArgs e)
         {
+            // assign time and bonus points
             Global.CountdownTime = 60;
             Global.BonusPoints = 0;
 
@@ -34,6 +35,7 @@ namespace Dewey_Decimal_System
 
         private void btnMed_Click(object sender, EventArgs e)
         {
+            // assign time and bonus points
             Global.CountdownTime = 45;
             Global.BonusPoints = 25;
 
@@ -42,6 +44,7 @@ namespace Dewey_Decimal_System
 
         private void btnHard_Click(object sender, EventArgs e)
         {
+            // assign time and bonus points
             Global.CountdownTime = 30;
             Global.BonusPoints = 50;
 
