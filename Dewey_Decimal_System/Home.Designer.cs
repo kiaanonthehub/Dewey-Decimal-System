@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnSortCallNos = new System.Windows.Forms.Button();
             this.btnSortCallNosLeaderboard = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnIdentifyingAreaLeaderboard = new System.Windows.Forms.Button();
+            this.btnIdentifyingAreas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -71,32 +71,32 @@
             this.btnSortCallNosLeaderboard.UseVisualStyleBackColor = false;
             this.btnSortCallNosLeaderboard.Click += new System.EventHandler(this.btnSortCallNosLeaderboard_Click);
             // 
-            // button1
+            // btnIdentifyingAreaLeaderboard
             // 
-            this.button1.BackColor = System.Drawing.Color.Bisque;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(289, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Leaderboard";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIdentifyingAreaLeaderboard.BackColor = System.Drawing.Color.Bisque;
+            this.btnIdentifyingAreaLeaderboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIdentifyingAreaLeaderboard.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIdentifyingAreaLeaderboard.Location = new System.Drawing.Point(289, 383);
+            this.btnIdentifyingAreaLeaderboard.Name = "btnIdentifyingAreaLeaderboard";
+            this.btnIdentifyingAreaLeaderboard.Size = new System.Drawing.Size(205, 44);
+            this.btnIdentifyingAreaLeaderboard.TabIndex = 3;
+            this.btnIdentifyingAreaLeaderboard.Text = "Leaderboard";
+            this.btnIdentifyingAreaLeaderboard.UseVisualStyleBackColor = false;
+            this.btnIdentifyingAreaLeaderboard.Click += new System.EventHandler(this.btnIdentifyingAreaLeaderboard_Click);
             // 
-            // button2
+            // btnIdentifyingAreas
             // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(289, 326);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 44);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Identifying Areas";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIdentifyingAreas.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnIdentifyingAreas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIdentifyingAreas.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIdentifyingAreas.ForeColor = System.Drawing.Color.Black;
+            this.btnIdentifyingAreas.Location = new System.Drawing.Point(289, 326);
+            this.btnIdentifyingAreas.Name = "btnIdentifyingAreas";
+            this.btnIdentifyingAreas.Size = new System.Drawing.Size(205, 44);
+            this.btnIdentifyingAreas.TabIndex = 2;
+            this.btnIdentifyingAreas.Text = "Identifying Areas";
+            this.btnIdentifyingAreas.UseVisualStyleBackColor = false;
+            this.btnIdentifyingAreas.Click += new System.EventHandler(this.btnIdentifyingAreas_Click);
             // 
             // button3
             // 
@@ -189,8 +189,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnIdentifyingAreaLeaderboard);
+            this.Controls.Add(this.btnIdentifyingAreas);
             this.Controls.Add(this.btnSortCallNosLeaderboard);
             this.Controls.Add(this.btnSortCallNos);
             this.ForeColor = System.Drawing.Color.Black;
@@ -212,8 +212,8 @@
 
         private Button btnSortCallNos;
         private Button btnSortCallNosLeaderboard;
-        private Button button1;
-        private Button button2;
+        private Button btnIdentifyingAreaLeaderboard;
+        private Button btnIdentifyingAreas;
         private Button button3;
         private Button button4;
         private PictureBox pictureBox1;

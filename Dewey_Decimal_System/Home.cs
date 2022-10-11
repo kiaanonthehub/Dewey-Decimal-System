@@ -28,9 +28,21 @@ namespace Dewey_Decimal_System
         private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)
         {
             // form navigation
-            frmLeaderboard frmLeaderboard = new frmLeaderboard();
+            SortingCallNoLeaderboard frmLeaderboard = new SortingCallNoLeaderboard();
             this.Hide();
             frmLeaderboard.ShowDialog();
+        }
+
+        private void btnIdentifyingAreas_Click(object sender, EventArgs e)
+        {
+            IdentifyingAreas frmAreas = new IdentifyingAreas();
+            this.Hide();
+            frmAreas.ShowDialog();
+        }
+
+        private void btnIdentifyingAreaLeaderboard_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

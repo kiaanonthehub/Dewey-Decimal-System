@@ -4,9 +4,9 @@ using System.Data;
 
 namespace Dewey_Decimal_System
 {
-    public partial class frmLeaderboard : Form
+    public partial class SortingCallNoLeaderboard : Form
     {
-        public frmLeaderboard()
+        public SortingCallNoLeaderboard()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Dewey_Decimal_System
 {
-    partial class frmLeaderboard
+    partial class SortingCallNoLeaderboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLeaderboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SortingCallNoLeaderboard));
             this.lvLeaderboard = new System.Windows.Forms.ListView();
             this.ch_username = new System.Windows.Forms.ColumnHeader();
             this.ch_score = new System.Windows.Forms.ColumnHeader();
@@ -71,7 +71,7 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Leaderboard";
             // 
-            // frmLeaderboard
+            // SortingCallNoLeaderboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -81,7 +81,7 @@
             this.Controls.Add(this.lvLeaderboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "frmLeaderboard";
+            this.Name = "SortingCallNoLeaderboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leaderboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLeaderboard_FormClosed);

@@ -10,6 +10,7 @@ namespace DeweyDecimalLibrary.Json
         public static string IdentifyingAreasFile = "IdentifyingAreasLeaderboard.json";
         public static string FindingCallNosFile =   "FindingCallNumbersLeaderboard.json";
 
+        #region Sorting Call Numbers
         // creates the json file
         public static void CreateJsonFile(string filename)
         {
@@ -61,5 +62,49 @@ namespace DeweyDecimalLibrary.Json
                 return false;
             }
         }
+        #endregion
+
+        #region Identifying Areas
+        // check if the json file exists
+        public static bool CallNumFileExists()
+        {
+            if (File.Exists(IdentifyingAreasFile))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        // creates the json file
+        public static void CreateCallNumFile()
+        {
+            // declare dictionary
+            Dictionary<string, string> callNums = new Dictionary<string, string>();
+
+            // populate dictionary
+            callNums.Add("000", "General Knowledge");
+            callNums.Add("100", "Philosophy & Psychology");
+            callNums.Add("200", "Religion");
+            callNums.Add("300", "Social Sciences");
+            callNums.Add("400", "Language");
+            callNums.Add("500", "Natural Sciences & Mathematics");
+            callNums.Add("600", "Technology (Applied Sciences)");
+            callNums.Add("700", "The Arts");
+            callNums.Add("800", "Literature & Rhetoric");
+            callNums.Add("900", "Geography & History");
+
+            File.WriteAllText(IdentifyingAreasFile, JsonSerializer.Serialize(callNums));
+        }
+
+        // retrieve json file into dictionary 
+        public static Dictionary<string, string> GetKeyValuePairs()
+        {
+            return JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(IdentifyingAreasFile));
+        }
+        #endregion
     }
 }

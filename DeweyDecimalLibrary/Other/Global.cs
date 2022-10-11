@@ -19,5 +19,11 @@ namespace DeweyDecimalLibrary.Other
         public static bool FindCallingNos { get; set; } = false;
         public static bool SaveScore { get; set; } = false;
         public static string Username { get; set; } = null;
+
+        // declare generic collections
+        public static List<ModelIdentifyingCallNos> lstDescription = new List<ModelIdentifyingCallNos>();
+        public static List<string> lstCallNos = new List<string>();
+        public static Dictionary<string, string> dictCallNoDescription = new Dictionary<string, string>();
+
     }
 }

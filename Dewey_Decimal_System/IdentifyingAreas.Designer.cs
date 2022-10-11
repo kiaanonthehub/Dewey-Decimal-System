@@ -63,6 +63,7 @@
             this.lstboxDescription.Name = "lstboxDescription";
             this.lstboxDescription.Size = new System.Drawing.Size(320, 279);
             this.lstboxDescription.TabIndex = 5;
+            this.lstboxDescription.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstboxDescription_MouseDown);
             // 
             // lstboxCallNo
             // 
@@ -73,6 +74,7 @@
             this.lstboxCallNo.Name = "lstboxCallNo";
             this.lstboxCallNo.Size = new System.Drawing.Size(143, 274);
             this.lstboxCallNo.TabIndex = 4;
+            this.lstboxCallNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstboxCallNo_MouseDown);
             // 
             // IdentifyingAreas
             // 
@@ -84,7 +86,9 @@
             this.Controls.Add(this.lstboxDescription);
             this.Controls.Add(this.lstboxCallNo);
             this.Name = "IdentifyingAreas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IdentifyingAreas";
+            this.Load += new System.EventHandler(this.IdentifyingAreas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
