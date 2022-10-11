@@ -58,8 +58,11 @@ namespace Dewey_Decimal_System
             {
                 frmSortingCallNumbers sortingCallNumbers = new frmSortingCallNumbers();
                 this.Hide();
-                sortingCallNumbers.ShowDialog();
-
+                try
+                {
+                    sortingCallNumbers.ShowDialog();
+                }
+                catch (System.NullReferenceException) { throw; }
             }
             else if (Global.IdentifyingAreas) 
             {

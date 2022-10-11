@@ -148,6 +148,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmSortingCallNumbers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SortingCallNumbers";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSortingCallNumbers_FormClosed);
             this.Load += new System.EventHandler(this.frmSortingCallNumbers_Load);

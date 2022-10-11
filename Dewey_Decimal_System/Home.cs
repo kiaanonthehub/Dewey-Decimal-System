@@ -18,8 +18,11 @@ namespace Dewey_Decimal_System
             // form navigation
             frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
             this.Hide();
-            frmDifficultyLevel.ShowDialog();
-
+            try
+            {
+                frmDifficultyLevel.ShowDialog();
+            }
+            catch (System.NullReferenceException) { throw; }
         }
 
         private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)

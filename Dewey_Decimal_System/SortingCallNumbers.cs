@@ -196,28 +196,62 @@ namespace Dewey_Decimal_System
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            int index = lstboxSorted.SelectedIndex;
-            string selected = lstboxSorted.SelectedItem.ToString();
+            // declare variables
+            string selected = null;
+            int index = 0;
 
-            if (index > 0)
+            // error handling
+            try
             {
-                lstboxSorted.Items.RemoveAt(index);
-                lstboxSorted.Items.Insert(index - 1, selected);
-                lstboxSorted.SetSelected(index - 1, true);
+                index = lstboxSorted.SelectedIndex;
+
+                // error handling
+                if (lstboxSorted.SelectedItem != null)
+                {
+                    selected = lstboxSorted.SelectedItem.ToString();
+
+                    // moves the selected item up
+                    if (index > 0)
+                    {
+                        lstboxSorted.Items.RemoveAt(index);
+                        lstboxSorted.Items.Insert(index - 1, selected);
+                        lstboxSorted.SetSelected(index - 1, true);
+                    }
+                }
+                else { MessageBox.Show("Please select an item to move "); }
             }
+            catch (System.NullReferenceException) { MessageBox.Show("Please select an item to move "); }
         }
 
         private void btnDown_Click(object sender, EventArgs e)
         {
-            int index = lstboxSorted.SelectedIndex;
-            string selected = lstboxSorted.SelectedItem.ToString();
+            // decalre variables
+            string selected = null;
+            int index = 0;
 
-            if (index < lstboxSorted.Items.Count-1)
+            // error handling 
+            try
             {
-                lstboxSorted.Items.RemoveAt(index);
-                lstboxSorted.Items.Insert(index + 1, selected);
-                lstboxSorted.SetSelected(index + 1, true);
+                index = lstboxSorted.SelectedIndex;
+
+                // error handling
+                if (lstboxSorted.SelectedItem != null)
+                {
+                    selected = lstboxSorted.SelectedItem.ToString();
+
+                    // moves the selected item down
+                    if (index < lstboxSorted.Items.Count - 1)
+                    {
+                        lstboxSorted.Items.RemoveAt(index);
+                        lstboxSorted.Items.Insert(index + 1, selected);
+                        lstboxSorted.SetSelected(index + 1, true);
+                    }
+                }
+                else
+                { MessageBox.Show("Please select an item to move "); }
+
             }
+            catch (System.NullReferenceException) { throw; }
         }
     }
 }
