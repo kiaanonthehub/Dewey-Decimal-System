@@ -129,7 +129,13 @@ namespace Dewey_Decimal_System
 
             // initialise game start to false
             gameBegin = false;
-        }
+
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = true;
+            Global.Game3 = false;
+        
+    }
         #endregion
 
         #region Other

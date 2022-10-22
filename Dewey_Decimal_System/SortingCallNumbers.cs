@@ -130,6 +130,12 @@ namespace Dewey_Decimal_System
         {
             lstboxSorted.Items.Add(e.Data.GetData(DataFormats.Text));
             lstboxRandom.Items.Remove(e.Data.GetData(DataFormats.Text));
+
+            // initialise game mode
+            Global.Game1 = true;
+            Global.Game2 = false;
+            Global.Game3 = false;
+
         }
         #endregion
 
