@@ -1,5 +1,3 @@
-using DeweyDecimalLibrary.Json;
-using DeweyDecimalLibrary.Models;
 using DeweyDecimalLibrary.Other;
 
 namespace Dewey_Decimal_System
@@ -14,7 +12,13 @@ namespace Dewey_Decimal_System
         private void btnSortCallNos_Click(object sender, EventArgs e)
         {
             Global.SortCallingNos = true;
-            
+
+            // initialise game mode
+            Global.Game1 = true;
+            Global.Game2 = false;
+            Global.Game3 = false;
+
+
             // form navigation
             frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
             this.Hide();
@@ -31,6 +35,12 @@ namespace Dewey_Decimal_System
             SortingCallNoLeaderboard frmLeaderboard = new SortingCallNoLeaderboard();
             this.Hide();
             frmLeaderboard.ShowDialog();
+
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = true;
+            Global.Game3 = false;
+
         }
 
         private void btnIdentifyingAreas_Click(object sender, EventArgs e)
@@ -38,10 +48,19 @@ namespace Dewey_Decimal_System
             IdentifyingAreas frmAreas = new IdentifyingAreas();
             this.Hide();
             frmAreas.ShowDialog();
+
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = true;
+            Global.Game3 = false;
         }
 
         private void btnIdentifyingAreaLeaderboard_Click(object sender, EventArgs e)
         {
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = true;
+            Global.Game3 = false;
 
         }
     }

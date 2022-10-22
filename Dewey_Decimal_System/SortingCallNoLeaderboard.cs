@@ -1,5 +1,6 @@
 ﻿using DeweyDecimalLibrary.Json;
 using DeweyDecimalLibrary.Models;
+using DeweyDecimalLibrary.Other;
 using System.Data;
 
 namespace Dewey_Decimal_System
@@ -13,16 +14,22 @@ namespace Dewey_Decimal_System
 
         private void frmLeaderboard_Load(object sender, EventArgs e)
         {
-            bool Game1 = true, Game2 = false, Game3 = false;
 
             // check if the json file exists
             if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
             {
                 // create the json file
                 JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
+            }  
+            
+            // check if the json file exists
+            if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasFile))
+            {
+                // create the json file
+                JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasFile);
             }
 
-            if (Game1)
+            if (Global.Game1)
             {
                 lvLeaderboard.Items.Clear();
 
@@ -34,7 +41,7 @@ namespace Dewey_Decimal_System
                     .ToList()
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
             }
-            else if (Game2)
+            else if (Global.Game2)
             {
                 lvLeaderboard.Items.Clear();
 
@@ -46,7 +53,7 @@ namespace Dewey_Decimal_System
                     .ToList()
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
             }
-            else if (Game3)
+            else if (Global.Game3)
             {
                 lvLeaderboard.Items.Clear();
 

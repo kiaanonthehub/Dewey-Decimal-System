@@ -20,6 +20,10 @@ namespace DeweyDecimalLibrary.Other
         public static bool SaveScore { get; set; } = false;
         public static string Username { get; set; } = null;
 
+        public static bool Game1 { get; set; } = false;
+        public static bool Game2 { get; set; } = false;
+        public static bool Game3 { get; set; } = false;
+
         // declare generic collections
         public static List<ModelIdentifyingCallNos> lstDescription = new List<ModelIdentifyingCallNos>();
         public static List<string> lstCallNos = new List<string>();
