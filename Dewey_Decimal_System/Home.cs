@@ -31,28 +31,30 @@ namespace Dewey_Decimal_System
 
         private void btnSortCallNosLeaderboard_Click(object sender, EventArgs e)
         {
+            // initialise game mode
+            Global.Game1 = true;
+            Global.Game2 = false;
+            Global.Game3 = false;
+
             // form navigation
             SortingCallNoLeaderboard frmLeaderboard = new SortingCallNoLeaderboard();
             this.Hide();
             frmLeaderboard.ShowDialog();
 
-            // initialise game mode
-            Global.Game1 = false;
-            Global.Game2 = true;
-            Global.Game3 = false;
 
         }
 
         private void btnIdentifyingAreas_Click(object sender, EventArgs e)
         {
-            IdentifyingAreas frmAreas = new IdentifyingAreas();
-            this.Hide();
-            frmAreas.ShowDialog();
-
             // initialise game mode
             Global.Game1 = false;
             Global.Game2 = true;
             Global.Game3 = false;
+
+            IdentifyingAreas frmAreas = new IdentifyingAreas();
+            this.Hide();
+            frmAreas.ShowDialog();
+
         }
 
         private void btnIdentifyingAreaLeaderboard_Click(object sender, EventArgs e)
@@ -62,6 +64,10 @@ namespace Dewey_Decimal_System
             Global.Game2 = true;
             Global.Game3 = false;
 
+            // navigation to new form 
+            SortingCallNoLeaderboard sortingCallNoLeaderboard = new SortingCallNoLeaderboard();
+            this.Hide();
+            sortingCallNoLeaderboard.ShowDialog();
         }
     }
 }

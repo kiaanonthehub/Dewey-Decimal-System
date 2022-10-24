@@ -27,11 +27,22 @@ namespace Dewey_Decimal_System
             {
                 // create the json file
                 JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasFile);
+            }  
+            
+            // check if the json file exists
+            if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasCallNo))
+            {
+                // create the json file
+                JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasCallNo);
             }
+
+            Console.WriteLine(Global.Game1);
+            Console.WriteLine(Global.Game2);
+            Console.WriteLine(Global.Game3);
 
             if (Global.Game1)
             {
-                lvLeaderboard.Items.Clear();
+                //lvLeaderboard.Items.Clear();
 
                 // retrieve data from json file
                 List<ModelHighScore> lstModelHightScore = JsonFileUtility.GetAllScores(JsonFileUtility.SortingCallNosFile);
@@ -40,6 +51,8 @@ namespace Dewey_Decimal_System
                 lstModelHightScore.OrderByDescending(x => x.Score)
                     .ToList()
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
+                
+                Global.Game1 = false;
             }
             else if (Global.Game2)
             {
@@ -52,6 +65,8 @@ namespace Dewey_Decimal_System
                 lstModelHightScore.OrderByDescending(x => x.Score)
                     .ToList()
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
+
+                Global.Game2 = false;   
             }
             else if (Global.Game3)
             {
@@ -64,6 +79,8 @@ namespace Dewey_Decimal_System
                 lstModelHightScore.OrderByDescending(x => x.Score)
                     .ToList()
                     .ForEach(x => lvLeaderboard.Items.Add(new ListViewItem(new string[] { x.Username, x.Score.ToString() })));
+
+                Global.Game3 = false;
             }
         }
 

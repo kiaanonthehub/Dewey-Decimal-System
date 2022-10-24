@@ -7,6 +7,7 @@ namespace DeweyDecimalLibrary.Json
     {
         // file names
         public static string SortingCallNosFile =   "SortingCallNumbersLeaderboard.json";
+        public static string IdentifyingAreasCallNo = "IdentifyingAreasCallNo.json";
         public static string IdentifyingAreasFile = "IdentifyingAreasLeaderboard.json";
         public static string FindingCallNosFile =   "FindingCallNumbersLeaderboard.json";
 
@@ -68,7 +69,7 @@ namespace DeweyDecimalLibrary.Json
         // check if the json file exists
         public static bool CallNumFileExists()
         {
-            if (File.Exists(IdentifyingAreasFile))
+            if (File.Exists(IdentifyingAreasCallNo))
             {
                 return true;
             }
@@ -97,13 +98,13 @@ namespace DeweyDecimalLibrary.Json
             callNums.Add("800", "Literature & Rhetoric");
             callNums.Add("900", "Geography & History");
 
-            File.WriteAllText(IdentifyingAreasFile, JsonSerializer.Serialize(callNums));
+            File.WriteAllText(IdentifyingAreasCallNo, JsonSerializer.Serialize(callNums));
         }
 
         // retrieve json file into dictionary 
         public static Dictionary<string, string> GetKeyValuePairs()
         {
-            return JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(IdentifyingAreasFile));
+            return JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(IdentifyingAreasCallNo));
         }
         #endregion
     }

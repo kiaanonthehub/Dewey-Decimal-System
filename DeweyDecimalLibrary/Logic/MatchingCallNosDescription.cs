@@ -17,6 +17,9 @@ namespace DeweyDecimalLibrary.Logic
         #region List Description
         public List<ModelIdentifyingCallNos> GetDescription()
         {
+            // check if json file exists - if !true create json file 
+            if (!JsonFileUtility.CallNumFileExists()) { JsonFileUtility.CreateCallNumFile(); }
+
             // create dictionary 
             Dictionary<string, string> callNums = JsonFileUtility.GetKeyValuePairs();
 
