@@ -37,7 +37,7 @@ namespace Dewey_Decimal_System
             Global.Game3 = false;
 
             // form navigation
-            SortingCallNoLeaderboard frmLeaderboard = new SortingCallNoLeaderboard();
+            Leaderboard frmLeaderboard = new Leaderboard();
             this.Hide();
             frmLeaderboard.ShowDialog();
 
@@ -64,7 +64,7 @@ namespace Dewey_Decimal_System
             Global.Game3 = false;
 
             // navigation to new form 
-            SortingCallNoLeaderboard sortingCallNoLeaderboard = new SortingCallNoLeaderboard();
+            Leaderboard sortingCallNoLeaderboard = new Leaderboard();
             this.Hide();
             sortingCallNoLeaderboard.ShowDialog();
         }

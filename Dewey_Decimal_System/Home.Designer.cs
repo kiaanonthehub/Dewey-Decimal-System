@@ -166,12 +166,12 @@
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.lblHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeader.Font = new System.Drawing.Font("Trebuchet MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHeader.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblHeader.Location = new System.Drawing.Point(25, 48);
+            this.lblHeader.BackColor = System.Drawing.SystemColors.Info;
+            this.lblHeader.Font = new System.Drawing.Font("Sylfaen", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeader.ForeColor = System.Drawing.Color.Black;
+            this.lblHeader.Location = new System.Drawing.Point(158, 46);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(761, 81);
+            this.lblHeader.Size = new System.Drawing.Size(432, 48);
             this.lblHeader.TabIndex = 9;
             this.lblHeader.Text = "Dewey Decimal Game📚";
             // 
@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.BackgroundImage = global::Dewey_Decimal_System.Properties.Resources.pexels_heorhii_heorhiichuk_4299402;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.lblHeader);

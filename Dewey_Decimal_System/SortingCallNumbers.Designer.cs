@@ -69,7 +69,7 @@
             // lblCountdown
             // 
             this.lblCountdown.AutoSize = true;
-            this.lblCountdown.BackColor = System.Drawing.Color.Black;
+            this.lblCountdown.BackColor = System.Drawing.Color.Transparent;
             this.lblCountdown.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCountdown.ForeColor = System.Drawing.Color.Transparent;
             this.lblCountdown.Location = new System.Drawing.Point(147, 34);
@@ -81,7 +81,7 @@
             // lblCountdownEdit
             // 
             this.lblCountdownEdit.AutoSize = true;
-            this.lblCountdownEdit.BackColor = System.Drawing.Color.Black;
+            this.lblCountdownEdit.BackColor = System.Drawing.Color.Transparent;
             this.lblCountdownEdit.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCountdownEdit.ForeColor = System.Drawing.Color.Transparent;
             this.lblCountdownEdit.Location = new System.Drawing.Point(447, 34);

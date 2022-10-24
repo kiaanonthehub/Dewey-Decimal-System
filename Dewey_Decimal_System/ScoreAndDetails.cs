@@ -78,6 +78,7 @@ namespace Dewey_Decimal_System
 
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
+
             Global.Username = txbUsername.Text;
 
             // instantiate high score model 
@@ -88,20 +89,62 @@ namespace Dewey_Decimal_System
 
             modelHighScore.Username = Global.Username;
 
-            // check if the json file exists
-            if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
+            if (Global.Game1)
             {
-                // create the json file
-                JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
+                // Game 1
+                // check if the json file exists
+                if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
+                {
+                    // create the json file
+                    JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
 
-                // write data to the file
-                JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                    // write data to the file
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                }
+                else
+                {
+                    // write to json
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                }
             }
-            else
+            else if (Global.Game2)
             {
-                // write to json
-                JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                // Game 2
+                // check if the json file exists
+                if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasFile))
+                {
+                    // create the json file
+                    JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasFile);
+
+                    // write data to the file
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
+                }
+                else
+                {
+                    // write to json
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
+                }
+
             }
+            else if (Global.Game3)
+            {
+                // Game 3
+                // check if the json file exists
+                if (!JsonFileUtility.FileExists(JsonFileUtility.FindingCallNosFile))
+                {
+                    // create the json file
+                    JsonFileUtility.CreateJsonFile(JsonFileUtility.FindingCallNosFile);
+
+                    // write data to the file
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.FindingCallNosFile);
+                }
+                else
+                {
+                    // write to json
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.FindingCallNosFile);
+                }
+            }
+
 
             // message to the user
             MessageBox.Show("Score has been saved successfully");

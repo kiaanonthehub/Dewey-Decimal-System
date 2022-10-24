@@ -1,6 +1,6 @@
 ﻿namespace Dewey_Decimal_System
 {
-    partial class SortingCallNoLeaderboard
+    partial class Leaderboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SortingCallNoLeaderboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leaderboard));
             this.lvLeaderboard = new System.Windows.Forms.ListView();
             this.ch_username = new System.Windows.Forms.ColumnHeader();
             this.ch_score = new System.Windows.Forms.ColumnHeader();
