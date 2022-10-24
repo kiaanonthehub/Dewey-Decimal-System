@@ -33,7 +33,7 @@ namespace Dewey_Decimal_System
             if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasCallNo))
             {
                 // create the json file
-                JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasCallNo);
+                JsonFileUtility.CreateCallNumFile();
             }
 
             Console.WriteLine(Global.Game1);
