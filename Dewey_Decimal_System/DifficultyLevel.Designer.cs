@@ -41,48 +41,48 @@
             // 
             // btnEasy
             // 
-            this.btnEasy.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnEasy.BackColor = System.Drawing.Color.LightPink;
             this.btnEasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEasy.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEasy.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEasy.ForeColor = System.Drawing.Color.Transparent;
             this.btnEasy.Location = new System.Drawing.Point(223, 197);
             this.btnEasy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEasy.Name = "btnEasy";
             this.btnEasy.Size = new System.Drawing.Size(329, 48);
             this.btnEasy.TabIndex = 0;
-            this.btnEasy.Text = "Take It Easy On Me 😊";
+            this.btnEasy.Text = "Take It Easy On Me";
             this.toolTipMode1.SetToolTip(this.btnEasy, "Double click on the button to select the easy difficulty mode.");
             this.btnEasy.UseVisualStyleBackColor = false;
             this.btnEasy.Click += new System.EventHandler(this.btnEasy_Click);
             // 
             // btnMed
             // 
-            this.btnMed.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnMed.BackColor = System.Drawing.Color.LightCoral;
             this.btnMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMed.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMed.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnMed.ForeColor = System.Drawing.Color.Transparent;
             this.btnMed.Location = new System.Drawing.Point(223, 260);
             this.btnMed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMed.Name = "btnMed";
             this.btnMed.Size = new System.Drawing.Size(329, 48);
             this.btnMed.TabIndex = 1;
-            this.btnMed.Text = "I Think I Got This  😮‍💨";
+            this.btnMed.Text = "I Think I Got This ";
             this.toolTipMode2.SetToolTip(this.btnMed, "Double click on the button to select the medium difficulty mode.");
             this.btnMed.UseVisualStyleBackColor = false;
             this.btnMed.Click += new System.EventHandler(this.btnMed_Click);
             // 
             // btnHard
             // 
-            this.btnHard.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHard.BackColor = System.Drawing.Color.DarkRed;
             this.btnHard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHard.Font = new System.Drawing.Font("Tempus Sans ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHard.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnHard.ForeColor = System.Drawing.Color.Transparent;
             this.btnHard.Location = new System.Drawing.Point(223, 326);
             this.btnHard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHard.Name = "btnHard";
             this.btnHard.Size = new System.Drawing.Size(329, 48);
             this.btnHard.TabIndex = 2;
-            this.btnHard.Text = "Challenge Me, I Dare You  😱";
+            this.btnHard.Text = "Challenge Me, I Dare You ";
             this.toolTipMode3.SetToolTip(this.btnHard, "Double click on the button to select the hard difficulty mode.");
             this.btnHard.UseVisualStyleBackColor = false;
             this.btnHard.Click += new System.EventHandler(this.btnHard_Click);
@@ -90,11 +90,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(192, 131);
+            this.label1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(163, 133);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 44);
+            this.label1.Size = new System.Drawing.Size(452, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please Select Your Difficulty:";
             // 
@@ -121,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHard);

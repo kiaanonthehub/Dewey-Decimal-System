@@ -20,7 +20,6 @@ namespace Dewey_Decimal_System
 
         private void DifficultyLevel_Load(object sender, EventArgs e)
         {
-            
         }
 
         #region Select Difficulty
@@ -54,8 +53,9 @@ namespace Dewey_Decimal_System
 
         public void NavigateToGame() 
         {
-            if (Global.SortCallingNos)
+            if (Global.Game1)
             {
+                // Game 1
                 frmSortingCallNumbers sortingCallNumbers = new frmSortingCallNumbers();
                 this.Hide();
                 try
@@ -64,11 +64,15 @@ namespace Dewey_Decimal_System
                 }
                 catch (System.NullReferenceException) { throw; }
             }
-            else if (Global.IdentifyingAreas) 
+            else if (Global.Game2) 
             {
                 // Game 2
+                IdentifyingAreas identifyingAreas = new IdentifyingAreas();
+                this.Hide();
+                identifyingAreas.ShowDialog();
+
             }
-            else if (Global.FindCallingNos)
+            else if (Global.Game3)
             {
                 // Game 3
             }

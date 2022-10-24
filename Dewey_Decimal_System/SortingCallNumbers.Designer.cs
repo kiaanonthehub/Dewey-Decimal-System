@@ -46,7 +46,7 @@
             this.lstboxRandom.Font = new System.Drawing.Font("Open Sans Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lstboxRandom.FormattingEnabled = true;
             this.lstboxRandom.ItemHeight = 28;
-            this.lstboxRandom.Location = new System.Drawing.Point(151, 130);
+            this.lstboxRandom.Location = new System.Drawing.Point(141, 93);
             this.lstboxRandom.Name = "lstboxRandom";
             this.lstboxRandom.Size = new System.Drawing.Size(240, 284);
             this.lstboxRandom.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.lstboxSorted.Font = new System.Drawing.Font("Open Sans Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lstboxSorted.FormattingEnabled = true;
             this.lstboxSorted.ItemHeight = 28;
-            this.lstboxSorted.Location = new System.Drawing.Point(418, 130);
+            this.lstboxSorted.Location = new System.Drawing.Point(408, 93);
             this.lstboxSorted.Name = "lstboxSorted";
             this.lstboxSorted.Size = new System.Drawing.Size(242, 284);
             this.lstboxSorted.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.lblCountdown.BackColor = System.Drawing.Color.Black;
             this.lblCountdown.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCountdown.ForeColor = System.Drawing.Color.Transparent;
-            this.lblCountdown.Location = new System.Drawing.Point(157, 71);
+            this.lblCountdown.Location = new System.Drawing.Point(147, 34);
             this.lblCountdown.Name = "lblCountdown";
             this.lblCountdown.Size = new System.Drawing.Size(141, 34);
             this.lblCountdown.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.lblCountdownEdit.BackColor = System.Drawing.Color.Black;
             this.lblCountdownEdit.Font = new System.Drawing.Font("Perpetua Titling MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCountdownEdit.ForeColor = System.Drawing.Color.Transparent;
-            this.lblCountdownEdit.Location = new System.Drawing.Point(457, 71);
+            this.lblCountdownEdit.Location = new System.Drawing.Point(447, 34);
             this.lblCountdownEdit.Name = "lblCountdownEdit";
             this.lblCountdownEdit.Size = new System.Drawing.Size(102, 34);
             this.lblCountdownEdit.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.btnUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUp.BackgroundImage")));
             this.btnUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnUp.Location = new System.Drawing.Point(695, 174);
+            this.btnUp.Location = new System.Drawing.Point(685, 137);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(71, 65);
             this.btnUp.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.btnDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDown.BackgroundImage")));
             this.btnDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDown.Location = new System.Drawing.Point(695, 309);
+            this.btnDown.Location = new System.Drawing.Point(685, 272);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(71, 65);
             this.btnDown.TabIndex = 6;
@@ -138,6 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
@@ -152,6 +153,7 @@
             this.Text = "SortingCallNumbers";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSortingCallNumbers_FormClosed);
             this.Load += new System.EventHandler(this.frmSortingCallNumbers_Load);
+            this.MouseHover += new System.EventHandler(this.frmSortingCallNumbers_MouseHover);
             this.ResumeLayout(false);
             this.PerformLayout();
 

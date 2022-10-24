@@ -51,10 +51,9 @@ namespace Dewey_Decimal_System
             Global.Game2 = true;
             Global.Game3 = false;
 
-            IdentifyingAreas frmAreas = new IdentifyingAreas();
+            frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
             this.Hide();
-            frmAreas.ShowDialog();
-
+            frmDifficultyLevel.ShowDialog();
         }
 
         private void btnIdentifyingAreaLeaderboard_Click(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using DeweyDecimalLibrary.Logic;
 using DeweyDecimalLibrary.Other;
+using System.Reflection.PortableExecutable;
 
 namespace Dewey_Decimal_System
 {
@@ -258,6 +259,27 @@ namespace Dewey_Decimal_System
 
             }
             catch (System.NullReferenceException) { throw; }
+        }
+
+        private void frmSortingCallNumbers_MouseHover(object sender, EventArgs e)
+        {
+            // check if the game has been completed
+            if (Convert.ToInt32(timer.TimeLeft.Seconds) == 0 && lstboxRandom.Items.Count > 0)
+            {
+                
+                    // incorrect sorting
+                    Global.Points = 0;
+                    Global.BonusPoints = 0;
+
+                    Global.UpdateUserControl = true;
+
+                    // show user details and score
+                    ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Unlucky! You Solved Incorrectly 😢 ");
+                    this.Hide();
+                    scoreAndDetails.Show();
+
+                
+            }
         }
     }
 }

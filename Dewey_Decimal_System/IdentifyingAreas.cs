@@ -16,7 +16,7 @@ namespace Dewey_Decimal_System
 {
     public partial class IdentifyingAreas : Form
     {
-       
+
         // instantiate object
         MatchingCallNosDescription matching = new MatchingCallNosDescription();
 
@@ -59,15 +59,8 @@ namespace Dewey_Decimal_System
                         // check if the game has been completed
                         if (matching.isGameFinished(lstboxCallNo.Items.Count))
                         {
-                            // stop timer
-                            timer.Stop();
-
-                            // write score to the json file 
-
-                            // prompt the user with a display message
-                            MessageBox.Show("Congratulations , Game Completed!");
+                            updatedScore();
                         }
-
                     }
                     else
                     {
@@ -91,6 +84,14 @@ namespace Dewey_Decimal_System
                 StartTimer();
                 gameBegin = true;
             }
+
+            // check if the game has been completed
+            if (matching.isGameFinished(lstboxCallNo.Items.Count))
+            {
+                updatedScore();
+            }
+
+
         }
 
         private void lstboxDescription_MouseDown(object sender, MouseEventArgs e)
@@ -99,6 +100,11 @@ namespace Dewey_Decimal_System
             {
                 StartTimer();
                 gameBegin = true;
+            }
+            // check if the game has been completed
+            if (matching.isGameFinished(lstboxCallNo.Items.Count))
+            {
+                updatedScore();
             }
         }
         #endregion
@@ -110,6 +116,10 @@ namespace Dewey_Decimal_System
             Global.lstDescription.Clear();
             Global.lstCallNos.Clear();
             Global.dictCallNoDescription.Clear();
+
+            // clear list view
+            lstboxCallNo.Items.Clear();
+            lstboxDescription.Items.Clear();
 
             // check if json file exists - if !true create json file 
             if (!JsonFileUtility.CallNumFileExists()) { JsonFileUtility.CreateCallNumFile(); }
@@ -134,8 +144,8 @@ namespace Dewey_Decimal_System
             Global.Game1 = false;
             Global.Game2 = true;
             Global.Game3 = false;
-        
-    }
+
+        }
         #endregion
 
         #region Other
@@ -153,7 +163,7 @@ namespace Dewey_Decimal_System
         public void StartTimer()
         {
             //set time dependent on difficulty 
-            timer.SetTime(0, 30); // 30s
+            timer.SetTime(0, Global.CountdownTime); // 30s
 
             timer.Start();
 
@@ -164,5 +174,48 @@ namespace Dewey_Decimal_System
             timer.StepMs = 77;
         }
         #endregion
+
+        #region Updated the score
+        private void updatedScore()
+        {
+            // stop timer
+            timer.Pause();
+
+            // save the score 
+            Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+
+            Global.UpdateUserControl = true;
+
+            // show user details and score
+            ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Congratulations! You Solved Correctly 👑 ");
+            this.Hide();
+            scoreAndDetails.Show();
+        }
+        #endregion
+        private void IdentifyingAreas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // form navigation
+            frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
+            this.Hide();
+            frmDifficultyLevel.ShowDialog();
+        }
+
+        private void IdentifyingAreas_MouseHover(object sender, EventArgs e)
+        {
+            // check if the game has been completed
+            if (Convert.ToInt32(timer.TimeLeft.Seconds) == 0)
+            {
+                // incorrect sorting
+                Global.Points = 0;
+                Global.BonusPoints = 0;
+
+                Global.UpdateUserControl = true;
+
+                // show user details and score
+                ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Unlucky! You Solved Incorrectly 😢 ");
+                this.Hide();
+                scoreAndDetails.Show();
+            }
+        }
     }
 }

@@ -48,6 +48,26 @@ namespace Dewey_Decimal_System
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
+            if (Global.Game1)
+            {
+                // Game 1
+                frmSortingCallNumbers sortingCallNumbers = new frmSortingCallNumbers();
+                this.Hide();
+                sortingCallNumbers.ShowDialog();
+               
+            }
+            else if (Global.Game2)
+            {
+                // Game 2
+                IdentifyingAreas identifyingAreas = new IdentifyingAreas();
+                this.Hide();
+                identifyingAreas.ShowDialog();
+
+            }
+            else if (Global.Game3)
+            {
+                // Game 3
+            }
 
             // load screen again 
             this.Hide();
