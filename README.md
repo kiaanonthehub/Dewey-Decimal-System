@@ -15,6 +15,7 @@
 -  [Bonus Features](#Bonus-Features)
 8. [Links](#Links)
 9. [Contact](#Contact)
+--- 
 
 ### Software
 -  Visual Studio 2022
