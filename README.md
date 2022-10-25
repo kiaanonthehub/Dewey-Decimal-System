@@ -4,11 +4,12 @@
 -  Visual Studio 2022
 -  C# Programming Language
 -  Winforms & Class Library .cproj
+---
 
 ### Introduction
-This is a Windows application built on the .NET 6 framework. 
-The UI is built on WinForms .NET 6 C# which had a dependency on the Class Libaray .NET 6 C# which contains all the logic of the application.
-Data is stored in a JSON File.
+-  This is a Windows application built on the .NET 6 framework. 
+-  The UI is built on WinForms .NET 6 C# which had a dependency on the Class Libaray .NET 6 C# which contains all the logic of the application.
+-- Data is stored in a JSON File.
 ---
 
 ### Purpose
