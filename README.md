@@ -9,7 +9,7 @@
 -  [Technical Requirements](#Technical-Requirements)
 -  [Gamification Features](#Gamification-Features)
 6. [Task-2](#Task-2)
--  Technical Requirements](#Technical-Requirements-1)
+-  [Technical Requirements](#Technical-Requirements-1)
 -  [Gamification Features](#Gamification-Features-1)
 7. [Task 1 & Task 2](#Task-1-&-Task-2)
 -  [Bonus Features](#Bonus-Features)
