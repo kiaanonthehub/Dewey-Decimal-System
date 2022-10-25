@@ -8,7 +8,7 @@
 5. [Task 1](#Task-1)  
 5.1. [Technical Requirements](#Technical-Requirements)  
 5.2. [Gamification Features](#Gamification-Features)
-6. [Task-2](#Task-2)
+6. [Task-2](#Task-2)  
 6.1  [Technical Requirements](#Technical-Requirements-1)  
 6.2  [Gamification Features](#Gamification-Features-1)  
 7. [Task 1 & Task 2](#Task-1-&-Task-2)
