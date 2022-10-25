@@ -2,7 +2,7 @@
 
 1. [Software](#markdown-header-my-first-title)
 
-2. [Introduction](Introduction)
+2. [Introduction](#Introduction)
 
 ### Software
 -  Visual Studio 2022
