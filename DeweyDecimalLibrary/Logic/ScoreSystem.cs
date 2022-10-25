@@ -38,7 +38,7 @@ namespace DeweyDecimalLibrary.Logic
         // calculate score for game 2
         public static int CalculateScore(int timeLeft , int count)
         {
-            return ((count / 4) * 100) + Global.BonusPoints; 
+            return ((count / 4) * 100) + Global.BonusPoints + timeLeft; 
         }
     }
 }
