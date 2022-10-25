@@ -5,7 +5,7 @@
 2. [Introduction](#Introduction)
 3. [Purpose](#Purpose)
 4. [Installation](#Installation)
-5. [Task 1](#Task-1)
+5. [Task 1](#Task-1)  
 5.1. [Technical Requirements](#Technical-Requirements)  
 5.2. [Gamification Features](#Gamification-Features)
 6. [Task-2](#Task-2)
