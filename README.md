@@ -1,5 +1,7 @@
 # Dewey Decimal Application 
+---
 
+## Table of Contents
 1. [Software](#Software)
 2. [Introduction](#Introduction)
 3. [Purpose](#Purpose)
@@ -8,8 +10,12 @@
 -  [Technical Requirements](#Technical-Requirements)
 -  [Gamification Features](#Gamification-Features)
 6. [Task-2](#Task-2)
--  [Technical Requirements](#Technical-Requirements)
--  [Gamification Features](#Gamification-Features)
+-  [Technical Requirements](#Technical-Requirements-1)
+-  [Gamification Features](#Gamification-Features-1)
+7. [Task 1 & Task 2](#Task-1-&-Task-2)
+-- [Bonus Features](#Bonus-Features)
+8. [Links](#Links)
+9. [Contact](#Contact)
 
 ### Software
 -  Visual Studio 2022
@@ -80,11 +86,11 @@ After using the training software, the user must be able to:
 -  Custom Countdown Timer Class
 ---
 
-### Links
+## Links
 Task 1 Video Presentation (https://youtu.be/VcTeVgUjbuY)
 ---
 
-### Contact
+## Contact
 -  Version No. 2.0.0
 -  Release Date: 21/09/2022
 -  Updated on : 25/10/2022
