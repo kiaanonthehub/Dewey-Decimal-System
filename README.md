@@ -1,9 +1,9 @@
 # Dewey Decimal Application 
 
 ### Software
--Visual Studio 2022
--C# Programming Language
--Winforms & Class Library .cproj
+-  Visual Studio 2022
+-  C# Programming Language
+-  Winforms & Class Library .cproj
 
 ### Introduction
 
@@ -18,9 +18,9 @@ But the head librarian has found that even novice librarians sometimes get bored
 The purpose of the training software that you will develop for the library, is to make learning about the system fun and engaging.
 After using the training software, the user must be able to:
 
--Identify which broad area a book belongs to.
--Find the call number for a specific topic.
--Correctly replace a book in its position on a shelf.
+-  Identify which broad area a book belongs to.
+-  Find the call number for a specific topic.
+-  Correctly replace a book in its position on a shelf.
 
 ### Installation
 
@@ -36,30 +36,30 @@ After using the training software, the user must be able to:
 -  I have implemented a recusive quick sort algorithm 
 
 ### Gamification Features
--Leaderboard
--Countdown Timer
--Points System & Level Difficulty
+-  Leaderboard
+-  Countdown Timer
+-  Points System & Level Difficulty
 
 ## Task 2
 
-###Technical Requirements
+### Technical Requirements
 -Store the call numbers and their descriptions in a dictionary.
 
 ### Gamification Features
--Leaderboard
--Countdown Timer
--Points System & Level Difficulty
+-  Leaderboard
+-  Countdown Timer
+-  Points System & Level Difficulty
 
 ## Task 1 & Task 2
 
 ### Bonus Features
-• Single Linked Lists
-• Json Serialization and Deserialization
-• Json Files for data storage
-• Advanced LINQ queries
-• Sorting Algorithms
-• Advanced UI Gestures – Drag and Drop feature
-• Custom Countdown Timer Class
+-  Single Linked Lists
+-  Json Serialization and Deserialization
+-  Json Files for data storage
+-  Advanced LINQ queries
+-  Sorting Algorithms
+-  Advanced UI Gestures – Drag and Drop feature
+-  Custom Countdown Timer Class
 
 ### Links
 [Task 1 Video Presentation](https://youtu.be/VcTeVgUjbuY)
