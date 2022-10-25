@@ -6,7 +6,6 @@
 -  Winforms & Class Library .cproj
 
 ### Introduction
-
 This is a Windows application built on the .NET 6 framework. 
 The UI is built on WinForms .NET 6 C# which had a dependency on the Class Libaray .NET 6 C# which contains all the logic of the application.
 Data is stored in a JSON File.
@@ -71,8 +70,8 @@ After using the training software, the user must be able to:
 ---
 
 ### Contact
-Version No. 2.0.0
-Release Date: 21/09/2022
-Updated on : 25/10/2022
-Author : Maharaj Kiaan
-Contact Detail : st10116983@vcconnect.edu.za
+-  Version No. 2.0.0
+-  Release Date: 21/09/2022
+-  Updated on : 25/10/2022
+-  Author : Maharaj Kiaan
+-  Contact Detail : st10116983@vcconnect.edu.za
