@@ -12,7 +12,6 @@ The UI is built on WinForms .NET 6 C# which had a dependency on the Class Libara
 Data is stored in a JSON File.
 
 ### Purpose
-
 The Dewey Decimal System is fundamental to how everything is organised in the library. 
 But the head librarian has found that even novice librarians sometimes get bored when they must learn about the details of the system. 
 The purpose of the training software that you will develop for the library, is to make learning about the system fun and engaging.
@@ -23,7 +22,6 @@ After using the training software, the user must be able to:
 -  Correctly replace a book in its position on a shelf.
 
 ### Installation
-
 1. Download the file (FarmCentral_ST10116983.zip) or Clone the repository from GitHub
 2. Locate the downloaded file under your downloads in File Explorer. Right click on the file and select Extract All and set the location path to your desktop.
 3.  Then you would need to open the solution explorer and right click on the solution and select "Build". - This will copy the .dll files to the bin folder.
