@@ -49,7 +49,7 @@ After using the training software, the user must be able to:
 ## Task 2
 
 ### Technical Requirements
--Store the call numbers and their descriptions in a dictionary.
+-  Store the call numbers and their descriptions in a dictionary.
 
 ### Gamification Features
 -  Leaderboard
