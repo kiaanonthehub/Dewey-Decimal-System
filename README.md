@@ -4,7 +4,7 @@
 2. [Introduction](#Introduction)
 3. [Purpose](#Purpose)
 4. [Installation](#Installation)
-5. [Task 1](#Task 1)
+5. [Task-1](#Task-1)
 
 ### Software
 -  Visual Studio 2022
