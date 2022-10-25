@@ -1,8 +1,9 @@
 # Dewey Decimal Application 
 
-1. [Software](#markdown-header-my-first-title)
-
+1. [Software](###Software)
 2. [Introduction](#Introduction)
+3. [Purpose](#Purpose)
+4. [Installation](#Installation)
 
 ### Software
 -  Visual Studio 2022
