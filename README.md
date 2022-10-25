@@ -14,9 +14,12 @@
 
 ### Purpose
 The Dewey Decimal System is fundamental to how everything is organised in the library.
-  But the head librarian has found that even novice librarians sometimes get bored when they must learn about the details of the system. 
-  The purpose of the training software that you will develop for the library, is to make learning about the system fun and engaging.
-  After using the training software, the user must be able to:
+
+But the head librarian has found that even novice librarians sometimes get bored when they must learn about the details of the system. 
+
+The purpose of the training software that you will develop for the library, is to make learning about the system fun and engaging.
+
+After using the training software, the user must be able to:
 
 -  Identify which broad area a book belongs to.
 -  Find the call number for a specific topic.
@@ -67,7 +70,7 @@ The Dewey Decimal System is fundamental to how everything is organised in the li
 ---
 
 ### Links
-[Task 1 Video Presentation](https://youtu.be/VcTeVgUjbuY)
+Task 1 Video Presentation (https://youtu.be/VcTeVgUjbuY)
 ---
 
 ### Contact
