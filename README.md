@@ -35,7 +35,7 @@ After using the training software, the user must be able to:
 
 ## Task 1
 
-###Technical Requirements
+### Technical Requirements
 -  Make use of a list to store the generated call numbers - I integrated a Single Linked List and List
 -  I have implemented a recusive quick sort algorithm 
 ---
