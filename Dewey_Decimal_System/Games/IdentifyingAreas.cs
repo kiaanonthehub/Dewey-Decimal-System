@@ -152,6 +152,12 @@ namespace Dewey_Decimal_System
             // initialise counter 
             count = 0;
 
+            // game instructions
+            MessageBox.Show("When the call numbers (left) and the descriptions (right) loads\n" +
+                "the users is required to guess and select one call number and one description " +
+                "from each listbox and then select 'Check Answer' to see if the answer is correct.\n\n" +
+                "Upon guessing the correct answer, the items will be removed from the list box." +
+                "The user is required to guess all correct matching pairs before the time runs out.\n\n Goodluck!!","Identify Areas - Instructions");
         }
         #endregion
 
