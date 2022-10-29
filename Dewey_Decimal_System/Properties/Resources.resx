@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pexels-heorhii-heorhiichuk-4299402" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-heorhii-heorhiichuk-4299402.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pexels-josh-sorenson-990432" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\pexels-josh-sorenson-990432.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-heorhii-heorhiichuk-4299402" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-heorhii-heorhiichuk-4299402.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1ddf1f1334afb0767824a62552d0fadb--backgrounds-free-black-backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1ddf1f1334afb0767824a62552d0fadb--backgrounds-free-black-backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

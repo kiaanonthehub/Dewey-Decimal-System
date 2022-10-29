@@ -63,6 +63,16 @@ namespace Dewey_Decimal_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1ddf1f1334afb0767824a62552d0fadb__backgrounds_free_black_backgrounds {
+            get {
+                object obj = ResourceManager.GetObject("1ddf1f1334afb0767824a62552d0fadb--backgrounds-free-black-backgrounds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_heorhii_heorhiichuk_4299402 {
             get {
                 object obj = ResourceManager.GetObject("pexels-heorhii-heorhiichuk-4299402", resourceCulture);
