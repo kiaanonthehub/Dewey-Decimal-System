@@ -73,7 +73,7 @@ namespace Dewey_Decimal_System
                 lvLeaderboard.Items.Clear();
 
                 // retrieve data from json file
-                List<ModelHighScore> lstModelHightScore = JsonFileUtility.GetAllScores(JsonFileUtility.FindingCallNosFile);
+                List<ModelHighScore> lstModelHightScore = JsonFileUtility.GetAllScores(JsonFileUtility.TreeHighScoreFile);
 
                 // populate list view
                 lstModelHightScore.OrderByDescending(x => x.Score)

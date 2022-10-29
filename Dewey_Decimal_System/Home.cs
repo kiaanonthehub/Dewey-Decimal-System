@@ -1,3 +1,4 @@
+using Dewey_Decimal_System.Games;
 using DeweyDecimalLibrary.Other;
 
 namespace Dewey_Decimal_System
@@ -67,6 +68,13 @@ namespace Dewey_Decimal_System
             Leaderboard sortingCallNoLeaderboard = new Leaderboard();
             this.Hide();
             sortingCallNoLeaderboard.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FindingCallNumbers  findingCallNumbers = new FindingCallNumbers();
+            this.Hide();
+            findingCallNumbers.ShowDialog();
         }
     }
 }

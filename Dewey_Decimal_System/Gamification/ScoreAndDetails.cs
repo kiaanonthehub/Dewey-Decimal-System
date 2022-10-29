@@ -130,18 +130,18 @@ namespace Dewey_Decimal_System
             {
                 // Game 3
                 // check if the json file exists
-                if (!JsonFileUtility.FileExists(JsonFileUtility.FindingCallNosFile))
+                if (!JsonFileUtility.FileExists(JsonFileUtility.TreeHighScoreFile))
                 {
                     // create the json file
-                    JsonFileUtility.CreateJsonFile(JsonFileUtility.FindingCallNosFile);
+                    JsonFileUtility.CreateJsonFile(JsonFileUtility.TreeHighScoreFile);
 
                     // write data to the file
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.FindingCallNosFile);
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
                 }
                 else
                 {
                     // write to json
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.FindingCallNosFile);
+                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
                 }
             }
 

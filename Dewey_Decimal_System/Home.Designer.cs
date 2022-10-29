@@ -114,7 +114,6 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.Enabled = false;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
@@ -124,6 +123,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Finding Call Numbers";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 

@@ -45,6 +45,7 @@
             this.btnChoice1.TabIndex = 0;
             this.btnChoice1.Text = "button1";
             this.btnChoice1.UseVisualStyleBackColor = true;
+            this.btnChoice1.Click += new System.EventHandler(this.btnChoice1_Click);
             // 
             // btnChoice2
             // 
@@ -54,6 +55,7 @@
             this.btnChoice2.TabIndex = 1;
             this.btnChoice2.Text = "button2";
             this.btnChoice2.UseVisualStyleBackColor = true;
+            this.btnChoice2.Click += new System.EventHandler(this.btnChoice2_Click);
             // 
             // btnChoice3
             // 
@@ -63,6 +65,7 @@
             this.btnChoice3.TabIndex = 2;
             this.btnChoice3.Text = "button3";
             this.btnChoice3.UseVisualStyleBackColor = true;
+            this.btnChoice3.Click += new System.EventHandler(this.btnChoice3_Click);
             // 
             // btnChoice4
             // 
@@ -72,14 +75,17 @@
             this.btnChoice4.TabIndex = 3;
             this.btnChoice4.Text = "button4";
             this.btnChoice4.UseVisualStyleBackColor = true;
+            this.btnChoice4.Click += new System.EventHandler(this.btnChoice4_Click);
             // 
             // txbDescription
             // 
             this.txbDescription.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbDescription.Location = new System.Drawing.Point(313, 180);
+            this.txbDescription.Location = new System.Drawing.Point(143, 180);
             this.txbDescription.Name = "txbDescription";
-            this.txbDescription.Size = new System.Drawing.Size(284, 39);
+            this.txbDescription.ReadOnly = true;
+            this.txbDescription.Size = new System.Drawing.Size(623, 39);
             this.txbDescription.TabIndex = 4;
+            this.txbDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -121,6 +127,7 @@
             this.Controls.Add(this.btnChoice1);
             this.Name = "FindingCallNumbers";
             this.Text = "FindingCallNumbers";
+            this.Load += new System.EventHandler(this.FindingCallNumbers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
