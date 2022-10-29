@@ -1,10 +1,13 @@
-﻿namespace DeweyDecimalLibrary.Logic
+﻿using DeweyDecimalLibrary.Other;
+using System.Reflection.Metadata.Ecma335;
+
+namespace DeweyDecimalLibrary.Logic
 {
     public static class ScoreSystem
     {
         public static int CalculateScore(int timeLeft)
         {
-            // initialise properties
+            // initialise properties - Game 1
             int timeCompleted = 30 - timeLeft, score = 0;
 
             // logic structure of points system
@@ -30,6 +33,12 @@
             }
 
             return score;
+        }
+
+        // calculate score for game 2
+        public static int CalculateScore(int timeLeft , int count)
+        {
+            return ((count / 4) * 100) + Global.BonusPoints + timeLeft; 
         }
     }
 }

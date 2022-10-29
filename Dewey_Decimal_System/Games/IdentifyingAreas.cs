@@ -16,6 +16,7 @@ namespace Dewey_Decimal_System
 {
     public partial class IdentifyingAreas : Form
     {
+        static int count = 0;
 
         // instantiate object
         MatchingCallNosDescription matching = new MatchingCallNosDescription();
@@ -55,6 +56,9 @@ namespace Dewey_Decimal_System
                         // if the matching pair is correct remove it from the listbox 
                         lstboxCallNo.Items.RemoveAt(lstboxCallNo.SelectedIndex);
                         lstboxDescription.Items.RemoveAt(lstboxDescription.SelectedIndex);
+
+                        // increment count 
+                        count++;
 
                         // check if the game has been completed
                         if (matching.isGameFinished(lstboxCallNo.Items.Count))
@@ -145,6 +149,9 @@ namespace Dewey_Decimal_System
             Global.Game2 = true;
             Global.Game3 = false;
 
+            // initialise counter 
+            count = 0;
+
         }
         #endregion
 
@@ -182,7 +189,7 @@ namespace Dewey_Decimal_System
             timer.Pause();
 
             // save the score 
-            Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+            Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds) , count);
 
             Global.UpdateUserControl = true;
 
@@ -206,8 +213,8 @@ namespace Dewey_Decimal_System
             if (Convert.ToInt32(timer.TimeLeft.Seconds) == 0)
             {
                 // incorrect sorting
-                Global.Points = 0;
                 Global.BonusPoints = 0;
+                Global.Points = ScoreSystem.CalculateScore(0, count);
 
                 Global.UpdateUserControl = true;
 

@@ -24,10 +24,11 @@ namespace DeweyDecimalLibrary.Logic
                 //generate a random number 1 >= n <= 999
                 int number = rnd.Next(1, 1000);
 
-                //generate a random number between 1 and 10
-                int pCheck = rnd.Next(1, 11);
+                // generate a random number between 1 and 10
+                int reCheck = rnd.Next(1, 11);
 
-                if (pCheck > 4) { period = $".{rnd.Next(1, 100)}"; }
+                // uniqueness check 
+                if (reCheck > 4) { period = $".{rnd.Next(1, 100)}"; }
 
                 string author = RandomString(3);
 
