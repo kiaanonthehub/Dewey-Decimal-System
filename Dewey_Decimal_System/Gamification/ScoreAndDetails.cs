@@ -1,4 +1,5 @@
-﻿using DeweyDecimalLibrary.Json;
+﻿using Dewey_Decimal_System.Games;
+using DeweyDecimalLibrary.Json;
 using DeweyDecimalLibrary.Models;
 using DeweyDecimalLibrary.Other;
 using System;
@@ -67,6 +68,9 @@ namespace Dewey_Decimal_System
             else if (Global.Game3)
             {
                 // Game 3
+                FindingCallNumbers findingCallNumbers = new FindingCallNumbers();
+                this.Hide();
+                findingCallNumbers.ShowDialog();
             }
 
             // load screen again 
@@ -78,7 +82,6 @@ namespace Dewey_Decimal_System
 
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
-
             Global.Username = txbUsername.Text;
 
             // instantiate high score model 
@@ -147,7 +150,7 @@ namespace Dewey_Decimal_System
 
 
             // message to the user
-            MessageBox.Show("Score has been saved successfully");
+            MessageBox.Show(txbUsername.Text + "score of : "+txbFinalScore+" has been saved successfully", "Score Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             // navigate back to the home screen
             RefreshUI();

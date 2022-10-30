@@ -1,16 +1,23 @@
 ﻿using DeweyDecimalLibrary.Json;
 using DeweyDecimalLibrary.Logic;
 using DeweyDecimalLibrary.Models;
+using DeweyDecimalLibrary.Other;
 using DeweyDecimalLibrary.Tree_Structure;
 
 namespace Dewey_Decimal_System.Games
 {
     public partial class FindingCallNumbers : Form
     {
-        private TreeGameLevel treeGameLevel;
-        private bool lvl1 = true, lvl2 = false, lvl3 = false;
+        // instantiate timer object
+        CountDownTimer timer = new CountDownTimer();
 
-        public FindingCallNumbers()
+        // instantiate tree game object
+        private TreeGameLevel treeGameLevel;
+
+        // decalre and initialise bool for game levels
+        private bool lvl1 = true, lvl2 = false, lvl3 = false;
+        
+       public FindingCallNumbers()
         {
             InitializeComponent();
         }
@@ -20,6 +27,9 @@ namespace Dewey_Decimal_System.Games
         {
             // refesh the user interface to default values
             RefreshUI();
+
+            // disable buttons 
+            ButtonActions(false);
 
             // call method to check if files exist
             CheckFiles();
@@ -35,6 +45,11 @@ namespace Dewey_Decimal_System.Games
 
             // load buttons with descriptions
             PopulateChoice(1);
+
+            Global.Game1 = false;
+            Global.Game2 = false;
+            Global.Game3 = true;
+
         }
         #endregion
 
@@ -83,11 +98,12 @@ namespace Dewey_Decimal_System.Games
         }
         #endregion
 
-        #region Update Ui
+        #region Update UI
         private void PopulateChoice(int i)
         {
             if (i == 1)
             {
+                // populate level one child node descriptions and call number options
                 btnChoice1.Text = treeGameLevel.Level1Options[0].Description + "\n" + treeGameLevel.Level1Options[0].Number;
                 btnChoice2.Text = treeGameLevel.Level1Options[1].Description + "\n" + treeGameLevel.Level1Options[1].Number;
                 btnChoice3.Text = treeGameLevel.Level1Options[2].Description + "\n" + treeGameLevel.Level1Options[2].Number;
@@ -95,23 +111,40 @@ namespace Dewey_Decimal_System.Games
             }
             else if (i == 2)
             {
+                // populate level twoo child node descriptions and call number options
                 RefreshUI();
-                btnChoice1.Text = treeGameLevel.Level2Options[0].Description + "\n" + treeGameLevel.Level1Options[0].Number;
-                btnChoice2.Text = treeGameLevel.Level2Options[1].Description + "\n" + treeGameLevel.Level1Options[1].Number;
-                btnChoice3.Text = treeGameLevel.Level2Options[2].Description + "\n" + treeGameLevel.Level1Options[2].Number;
-                btnChoice4.Text = treeGameLevel.Level2Options[3].Description + "\n" + treeGameLevel.Level1Options[3].Number;
+                btnChoice1.Text = treeGameLevel.Level2Options[0].Description + "\n" + treeGameLevel.Level2Options[0].Number;
+                btnChoice2.Text = treeGameLevel.Level2Options[1].Description + "\n" + treeGameLevel.Level2Options[1].Number;
+                btnChoice3.Text = treeGameLevel.Level2Options[2].Description + "\n" + treeGameLevel.Level2Options[2].Number;
+                btnChoice4.Text = treeGameLevel.Level2Options[3].Description + "\n" + treeGameLevel.Level2Options[3].Number;
             }
             else if (i == 3)
             {
+                // populate level three child node descriptions and call number options
                 RefreshUI();
-                btnChoice1.Text = treeGameLevel.Level3Options[0].Description + "\n" + treeGameLevel.Level1Options[0].Number;
-                btnChoice2.Text = treeGameLevel.Level3Options[1].Description + "\n" + treeGameLevel.Level1Options[1].Number;
-                btnChoice3.Text = treeGameLevel.Level3Options[2].Description + "\n" + treeGameLevel.Level1Options[2].Number;
-                btnChoice4.Text = treeGameLevel.Level3Options[3].Description + "\n" + treeGameLevel.Level1Options[3].Number;
+                btnChoice1.Text = treeGameLevel.Level3Options[0].Description + "\n" + treeGameLevel.Level3Options[0].Number;
+                btnChoice2.Text = treeGameLevel.Level3Options[1].Description + "\n" + treeGameLevel.Level3Options[1].Number;
+                btnChoice3.Text = treeGameLevel.Level3Options[2].Description + "\n" + treeGameLevel.Level3Options[2].Number;
+                btnChoice4.Text = treeGameLevel.Level3Options[3].Description + "\n" + treeGameLevel.Level3Options[3].Number;
             }
             else
             {
                 Console.WriteLine("Populate Choice not found");
+            }
+
+        }
+
+        private async void FindingCallNumbers_MouseMove(object sender, MouseEventArgs e)
+        {
+            StartTimer();
+
+            // await 1.5 seconds before starting the game
+            await Task.Delay(1500);
+            // check if the timer has not run out
+            if (TimeFinished())
+            {
+                this.Hide();
+                EndGame();
             }
 
         }
@@ -154,10 +187,9 @@ namespace Dewey_Decimal_System.Games
                 else
                 {
                     // end game
-                    RefreshUI();
-                    ScoreAndDetails details = new ScoreAndDetails("You Loose");
-                    this.Hide();
-                    details.ShowDialog();
+                    MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //RefreshUI();
+                    //EndGame();
                 }
             }
             else if (lvl2)
@@ -177,10 +209,9 @@ namespace Dewey_Decimal_System.Games
                 else
                 {
                     // end game
-                    RefreshUI();
-                    ScoreAndDetails details = new ScoreAndDetails("You Loose");
-                    this.Hide();
-                    details.ShowDialog();
+                    MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //RefreshUI();
+                    //EndGame();
                 }
 
 
@@ -193,29 +224,112 @@ namespace Dewey_Decimal_System.Games
                 // if the answer is correct
                 if (isAnswerCorrect)
                 {
-                    //game won !!
-                    MessageBox.Show("You Win");
-                    
+                    // stop timer
+                    timer.Pause();
+
                     // for next game to be played
                     lvl1 = true;
                     lvl2 = false;
                     lvl3 = false;
+                    timer.Pause();
+                    lblTimer.Text = timer.TimeLeftStr;
                     RefreshUI();
 
-                    // winner winner chicken dinner
-                    ScoreAndDetails details = new ScoreAndDetails("Congratulations, You win");
-                    this.Hide();
-                    details.ShowDialog();
+                    // update the users score
+                    updatedScore();
                 }
                 else
                 {
                     // end game
                     RefreshUI();
-                    ScoreAndDetails details = new ScoreAndDetails("You Loose");
-                    this.Hide();
-                    details.ShowDialog();
+                    EndGame();
                 }
             }
+        }
+        #endregion
+
+        #region Start Timer
+        public bool StartTimer()
+        {
+            ButtonActions(true);
+
+            //set time dependent on difficulty 
+            timer.SetTime(0, Global.CountdownTime);
+
+            timer.Start();
+
+            //update label text
+            timer.TimeChanged += () => lblTimer.Text = timer.TimeLeftMsStr;
+
+            //timer step. By default is 1 second
+            timer.StepMs = 77;
+
+            return true;
+        }
+        #endregion
+
+        #region Update Score
+        private async void updatedScore()
+        {
+            // stop timer
+            timer.Pause();
+
+            // save the score 
+            Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
+
+            Global.UpdateUserControl = true;
+
+            // declay the current screen before showing the next view 
+            await Task.Delay(3000);
+
+            // show user details and score
+            ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Congratulations! You Solved Correctly 👑 ");
+            this.Hide();
+            scoreAndDetails.Show();
+
+
+
+        }
+        #endregion
+
+        #region End Game
+        private void EndGame()
+        {
+            timer.Pause();
+
+            // incorrect sorting
+            Global.BonusPoints = 0;
+            Global.Points = 0;
+
+            Global.UpdateUserControl = true;
+
+            // show user details and score
+            ScoreAndDetails scoreAndDetails = new ScoreAndDetails("Unlucky! You Solved Incorrectly 😢 ");
+            this.Hide();
+            scoreAndDetails.Show();
+        }
+        #endregion
+
+        #region Time Finished
+        public bool TimeFinished()
+        {
+            // check if the game has been completed
+            if (Convert.ToInt32(timer.TimeLeft.Seconds) == 0)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+        #endregion
+
+        #region Button ability
+        // control the button action
+        private void ButtonActions(bool isEnabled)
+        {
+            btnChoice1.Enabled = isEnabled;
+            btnChoice2.Enabled = isEnabled;
+            btnChoice3.Enabled = isEnabled;
+            btnChoice4.Enabled = isEnabled;
         }
         #endregion
     }

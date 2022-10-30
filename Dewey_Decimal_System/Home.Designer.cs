@@ -34,7 +34,7 @@
             this.btnIdentifyingAreaLeaderboard = new System.Windows.Forms.Button();
             this.btnIdentifyingAreas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFindingCallNumbers = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -101,7 +101,6 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Bisque;
-            this.button3.Enabled = false;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(534, 383);
@@ -110,20 +109,21 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Leaderboard";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.FindingCallNumbersLeaderboard_Click);
             // 
-            // button4
+            // btnFindingCallNumbers
             // 
-            this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(534, 326);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(205, 44);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Finding Call Numbers";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnFindingCallNumbers.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnFindingCallNumbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindingCallNumbers.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFindingCallNumbers.ForeColor = System.Drawing.Color.Black;
+            this.btnFindingCallNumbers.Location = new System.Drawing.Point(534, 326);
+            this.btnFindingCallNumbers.Name = "btnFindingCallNumbers";
+            this.btnFindingCallNumbers.Size = new System.Drawing.Size(205, 44);
+            this.btnFindingCallNumbers.TabIndex = 4;
+            this.btnFindingCallNumbers.Text = "Finding Call Numbers";
+            this.btnFindingCallNumbers.UseVisualStyleBackColor = false;
+            this.btnFindingCallNumbers.Click += new System.EventHandler(this.btnFindingCallNumbers_Click);
             // 
             // pictureBox1
             // 
@@ -188,7 +188,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnFindingCallNumbers);
             this.Controls.Add(this.btnIdentifyingAreaLeaderboard);
             this.Controls.Add(this.btnIdentifyingAreas);
             this.Controls.Add(this.btnSortCallNosLeaderboard);
@@ -215,7 +215,7 @@
         private Button btnIdentifyingAreaLeaderboard;
         private Button btnIdentifyingAreas;
         private Button button3;
-        private Button button4;
+        private Button btnFindingCallNumbers;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

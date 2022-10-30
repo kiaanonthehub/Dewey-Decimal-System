@@ -14,6 +14,7 @@ namespace DeweyDecimalLibrary.Logic
         //uses gets all the required information for a level from the tree
         public TreeGameLevel GetLevel()
         {
+            // instantiate tree game object
             TreeGameLevel level = new TreeGameLevel();
 
             //the path to the answer

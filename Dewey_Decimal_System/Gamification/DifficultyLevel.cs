@@ -1,4 +1,5 @@
-﻿using DeweyDecimalLibrary.Other;
+﻿using Dewey_Decimal_System.Games;
+using DeweyDecimalLibrary.Other;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,13 @@ namespace Dewey_Decimal_System
 
         private void DifficultyLevel_Load(object sender, EventArgs e)
         {
+        }
+        private void frmDifficultyLevel_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // navigate back to the homescreen
+            this.Hide();
+            Home home = new Home();
+            home.Show();
         }
 
         #region Select Difficulty
@@ -51,6 +59,8 @@ namespace Dewey_Decimal_System
         }
         #endregion
 
+        #region Game Navigation
+
         public void NavigateToGame() 
         {
             if (Global.Game1)
@@ -75,15 +85,13 @@ namespace Dewey_Decimal_System
             else if (Global.Game3)
             {
                 // Game 3
+
+                FindingCallNumbers findingCallNumbers = new FindingCallNumbers();
+                this.Hide();
+                findingCallNumbers.ShowDialog();
             }
         }
+        #endregion
 
-        private void frmDifficultyLevel_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // navigate back to the homescreen
-            this.Hide();
-            Home home = new Home();
-            home.Show();
-        }
     }
 }

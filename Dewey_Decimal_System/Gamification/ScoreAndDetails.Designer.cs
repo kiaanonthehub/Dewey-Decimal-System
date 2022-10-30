@@ -134,7 +134,7 @@
             this.lblUserMessage.AutoSize = true;
             this.lblUserMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblUserMessage.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUserMessage.Location = new System.Drawing.Point(301, 24);
+            this.lblUserMessage.Location = new System.Drawing.Point(117, 40);
             this.lblUserMessage.Name = "lblUserMessage";
             this.lblUserMessage.Size = new System.Drawing.Size(188, 36);
             this.lblUserMessage.TabIndex = 14;

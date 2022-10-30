@@ -190,6 +190,7 @@
             this.Name = "FindingCallNumbers";
             this.Text = "FindingCallNumbers";
             this.Load += new System.EventHandler(this.FindingCallNumbers_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FindingCallNumbers_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

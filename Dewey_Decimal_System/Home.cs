@@ -70,7 +70,20 @@ namespace Dewey_Decimal_System
             sortingCallNoLeaderboard.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+
+        private void btnFindingCallNumbers_Click(object sender, EventArgs e)
+        {
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = false;
+            Global.Game3 = true;
+
+            frmDifficultyLevel frmDifficultyLevel = new frmDifficultyLevel();
+            this.Hide();
+            frmDifficultyLevel.ShowDialog();
+        }
+
+        private void FindingCallNumbersLeaderboard_Click(object sender, EventArgs e)
         {
             // initialise game mode
             Global.Game1 = false;
@@ -78,9 +91,9 @@ namespace Dewey_Decimal_System
             Global.Game3 = true;
 
             // navigation to new form 
-            FindingCallNumbers findingCallNumbers = new FindingCallNumbers();
+            Leaderboard sortingCallNoLeaderboard = new Leaderboard();
             this.Hide();
-            findingCallNumbers.ShowDialog();
+            sortingCallNoLeaderboard.ShowDialog();
         }
     }
 }

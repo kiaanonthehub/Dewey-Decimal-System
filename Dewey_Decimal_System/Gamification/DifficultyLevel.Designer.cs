@@ -41,7 +41,7 @@
             // 
             // btnEasy
             // 
-            this.btnEasy.BackColor = System.Drawing.Color.LightPink;
+            this.btnEasy.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnEasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEasy.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEasy.ForeColor = System.Drawing.Color.Transparent;
@@ -57,7 +57,7 @@
             // 
             // btnMed
             // 
-            this.btnMed.BackColor = System.Drawing.Color.LightCoral;
+            this.btnMed.BackColor = System.Drawing.Color.PeachPuff;
             this.btnMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMed.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnMed.ForeColor = System.Drawing.Color.Transparent;
@@ -73,7 +73,7 @@
             // 
             // btnHard
             // 
-            this.btnHard.BackColor = System.Drawing.Color.DarkRed;
+            this.btnHard.BackColor = System.Drawing.Color.Tan;
             this.btnHard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHard.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnHard.ForeColor = System.Drawing.Color.Transparent;
@@ -90,8 +90,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(163, 133);
+            this.label1.Location = new System.Drawing.Point(171, 153);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(452, 32);
@@ -114,7 +115,7 @@
             // 
             this.toolTipMode3.IsBalloon = true;
             this.toolTipMode3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTipMode3.ToolTipTitle = "Mard Mode";
+            this.toolTipMode3.ToolTipTitle = "Hard Mode";
             // 
             // frmDifficultyLevel
             // 
