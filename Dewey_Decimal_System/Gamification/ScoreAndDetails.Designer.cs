@@ -109,8 +109,8 @@
             // 
             // btnSaveScore
             // 
-            this.btnSaveScore.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnSaveScore.Location = new System.Drawing.Point(435, 186);
+            this.btnSaveScore.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnSaveScore.Location = new System.Drawing.Point(458, 186);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(151, 38);
             this.btnSaveScore.TabIndex = 16;
@@ -120,8 +120,8 @@
             // 
             // btnPlayAgain
             // 
-            this.btnPlayAgain.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnPlayAgain.Location = new System.Drawing.Point(428, 283);
+            this.btnPlayAgain.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnPlayAgain.Location = new System.Drawing.Point(328, 333);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(158, 38);
             this.btnPlayAgain.TabIndex = 15;
@@ -132,10 +132,11 @@
             // lblUserMessage
             // 
             this.lblUserMessage.AutoSize = true;
-            this.lblUserMessage.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUserMessage.Location = new System.Drawing.Point(103, 24);
+            this.lblUserMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserMessage.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUserMessage.Location = new System.Drawing.Point(301, 24);
             this.lblUserMessage.Name = "lblUserMessage";
-            this.lblUserMessage.Size = new System.Drawing.Size(197, 42);
+            this.lblUserMessage.Size = new System.Drawing.Size(188, 36);
             this.lblUserMessage.TabIndex = 14;
             this.lblUserMessage.Text = "User Message";
             // 
@@ -175,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(205, 283);
+            this.label7.Location = new System.Drawing.Point(291, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(222, 35);
             this.label7.TabIndex = 25;

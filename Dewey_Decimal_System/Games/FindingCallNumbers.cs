@@ -15,6 +15,7 @@ namespace Dewey_Decimal_System.Games
             InitializeComponent();
         }
 
+        #region Form Load
         private void FindingCallNumbers_Load(object sender, EventArgs e)
         {
             // refesh the user interface to default values
@@ -35,7 +36,9 @@ namespace Dewey_Decimal_System.Games
             // load buttons with descriptions
             PopulateChoice(1);
         }
+        #endregion
 
+        #region Button Click Action
         private void btnChoice1_Click(object sender, EventArgs e)
         {
             CheckAnswer(btnChoice1.Text);
@@ -55,7 +58,9 @@ namespace Dewey_Decimal_System.Games
         {
             CheckAnswer(btnChoice4.Text);
         }
+        #endregion
 
+        #region Check if Files Exist
         private void CheckFiles()
         {
             //creates tree data file if it does not exist
@@ -76,7 +81,9 @@ namespace Dewey_Decimal_System.Games
                 TreeHolder.Tree = JsonFileUtility.GetTree();
             }
         }
+        #endregion
 
+        #region Update Ui
         private void PopulateChoice(int i)
         {
             if (i == 1)
@@ -109,6 +116,7 @@ namespace Dewey_Decimal_System.Games
 
         }
 
+        // method to initialise ui components back to default
         private void RefreshUI()
         {
             btnChoice1.Text = "";
@@ -116,26 +124,36 @@ namespace Dewey_Decimal_System.Games
             btnChoice3.Text = "";
             btnChoice4.Text = "";
         }
+        #endregion
 
+        #region Game Logic
+        // method to check if the users selected answer is correct to progress to the next round
         private void CheckAnswer(String text)
         {
+            // extract the description from the concatenated call number in the button component
             string[] split = text.Split("\n");
             string newSplit = split[0];
 
+            // declare temp bool
             bool isAnswerCorrect;
 
+            // check the level the user is on
             if (lvl1)
             {
+                // check if the user has selected the correct answer from the filtered tree nodes to progress through
                 isAnswerCorrect = treeGameLevel.Level1Options.Where(x => x.Description.Equals(newSplit)).Select(x => x.Correct).FirstOrDefault();
 
+                // if the answer is correct
                 if (isAnswerCorrect)
                 {
+                    // populated the choices for the next round
                     PopulateChoice(2);
                     lvl1 = false;
                     lvl2 = true;
                 }
                 else
                 {
+                    // end game
                     RefreshUI();
                     ScoreAndDetails details = new ScoreAndDetails("You Loose");
                     this.Hide();
@@ -144,9 +162,13 @@ namespace Dewey_Decimal_System.Games
             }
             else if (lvl2)
             {
+                // check if the user has selected the correct answer from the filtered tree nodes to progress through
                 isAnswerCorrect = treeGameLevel.Level2Options.Where(x => x.Description.Equals(newSplit)).Select(x => x.Correct).FirstOrDefault();
+
+                // if the answer is correct
                 if (isAnswerCorrect)
                 {
+                    // populated the choices for the next round
                     RefreshUI();
                     PopulateChoice(3);
                     lvl2 = false;
@@ -154,6 +176,7 @@ namespace Dewey_Decimal_System.Games
                 }
                 else
                 {
+                    // end game
                     RefreshUI();
                     ScoreAndDetails details = new ScoreAndDetails("You Loose");
                     this.Hide();
@@ -164,7 +187,10 @@ namespace Dewey_Decimal_System.Games
             }
             else if (lvl3)
             {
+                // check if the user has selected the correct answer from the filtered tree nodes to progress through
                 isAnswerCorrect = treeGameLevel.Level3Options.Where(x => x.Description.Equals(newSplit)).Select(x => x.Correct).FirstOrDefault();
+
+                // if the answer is correct
                 if (isAnswerCorrect)
                 {
                     //game won !!
@@ -183,6 +209,7 @@ namespace Dewey_Decimal_System.Games
                 }
                 else
                 {
+                    // end game
                     RefreshUI();
                     ScoreAndDetails details = new ScoreAndDetails("You Loose");
                     this.Hide();
@@ -190,5 +217,6 @@ namespace Dewey_Decimal_System.Games
                 }
             }
         }
+        #endregion
     }
 }

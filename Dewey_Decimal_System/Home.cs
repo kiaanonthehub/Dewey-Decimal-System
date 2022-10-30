@@ -72,7 +72,13 @@ namespace Dewey_Decimal_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FindingCallNumbers  findingCallNumbers = new FindingCallNumbers();
+            // initialise game mode
+            Global.Game1 = false;
+            Global.Game2 = false;
+            Global.Game3 = true;
+
+            // navigation to new form 
+            FindingCallNumbers findingCallNumbers = new FindingCallNumbers();
             this.Hide();
             findingCallNumbers.ShowDialog();
         }
