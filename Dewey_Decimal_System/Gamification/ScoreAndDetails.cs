@@ -73,11 +73,6 @@ namespace Dewey_Decimal_System
                 findingCallNumbers.ShowDialog();
             }
 
-            // load screen again 
-            this.Hide();
-            frmSortingCallNumbers frmSortingCallNumbers = new frmSortingCallNumbers();
-            frmSortingCallNumbers.ShowDialog();
-            this.Hide();
         }
 
         private void btnSaveScore_Click(object sender, EventArgs e)

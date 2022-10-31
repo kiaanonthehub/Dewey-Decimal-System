@@ -46,9 +46,13 @@ namespace Dewey_Decimal_System.Games
             // load buttons with descriptions
             PopulateChoice(1);
 
+            // initialise game modes
             Global.Game1 = false;
             Global.Game2 = false;
             Global.Game3 = true;
+
+            // show timer
+            lblTimer.Show();
 
         }
         #endregion
@@ -233,17 +237,18 @@ namespace Dewey_Decimal_System.Games
                     lvl3 = false;
                     timer.Pause();
                     lblTimer.Text = timer.TimeLeftStr;
+                    lblTimer.Hide();
                     RefreshUI();
 
                     // update the users score
                     updatedScore();
                 }
-                else
-                {
-                    // end game
-                    RefreshUI();
-                    EndGame();
-                }
+                //else
+                //{
+                //    // end game
+                //    RefreshUI();
+                //    EndGame();
+                //}
             }
         }
         #endregion
