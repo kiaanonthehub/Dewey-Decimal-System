@@ -72,7 +72,7 @@ namespace DeweyDecimalLibrary.Logic
         #region Check Users Answer
 
         // check if the user input matches the dictionary key value pair
-        public bool CheckAnswer(string callNo, string desc)
+        public bool CheckAnswer(string callNo, string desc, bool isAlt)
         {
             // populate the dictionary with the key value pairs stored in json file
             Global.dictCallNoDescription = JsonFileUtility.GetKeyValuePairs();
@@ -80,25 +80,52 @@ namespace DeweyDecimalLibrary.Logic
             // decalre temp dictionary
             Dictionary<string, string> tempDict = new Dictionary<string, string>();
 
-            // populate temp dictionary with user input
-            tempDict.Add(callNo, desc);
-
-            // iterate through temp dictionary
-            foreach (var x in tempDict)
+            if (isAlt)
             {
-                // iterate through json dictionary - contains all listed key value pairs
-                foreach (var y in Global.dictCallNoDescription)
-                {
-                    // check if the user pair matches the predefined pairs 
-                    if (x.Key.Equals(y.Key) && x.Value.Equals(y.Value))
-                    {
-                        count++;
 
-                        return true;
+                // populate temp dictionary with user input
+                tempDict.Add(callNo, desc);
+
+                // iterate through temp dictionary
+                foreach (var x in tempDict)
+                {
+                    // iterate through json dictionary - contains all listed key value pairs
+                    foreach (var y in Global.dictCallNoDescription)
+                    {
+                        // check if the user pair matches the predefined pairs 
+                        if (x.Key.Equals(y.Key) && x.Value.Equals(y.Value))
+                        {
+                            count++;
+
+                            return true;
+                        }
                     }
                 }
+                return false;
             }
-            return false;
+            else
+            {
+                // populate temp dictionary with user input
+                tempDict.Add(callNo, desc);
+
+                // iterate through temp dictionary
+                foreach (var x in tempDict)
+                {
+                    // iterate through json dictionary - contains all listed key value pairs
+                    foreach (var y in Global.dictCallNoDescription)
+                    {
+                        // check if the user pair matches the predefined pairs 
+                        if (x.Key.Equals(y.Value) && x.Value.Equals(y.Key))
+                        {
+                            count++;
+
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
         }
 
         #endregion

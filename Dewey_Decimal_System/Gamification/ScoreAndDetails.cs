@@ -2,15 +2,6 @@
 using DeweyDecimalLibrary.Json;
 using DeweyDecimalLibrary.Models;
 using DeweyDecimalLibrary.Other;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Dewey_Decimal_System
 {
@@ -55,14 +46,17 @@ namespace Dewey_Decimal_System
                 frmSortingCallNumbers sortingCallNumbers = new frmSortingCallNumbers();
                 this.Hide();
                 sortingCallNumbers.ShowDialog();
-               
+
             }
             else if (Global.Game2)
             {
+                Global.countAlt = Global.countAlt + 1;
+
                 // Game 2
                 IdentifyingAreas identifyingAreas = new IdentifyingAreas();
                 this.Hide();
                 identifyingAreas.ShowDialog();
+
 
             }
             else if (Global.Game3)
@@ -107,6 +101,8 @@ namespace Dewey_Decimal_System
             }
             else if (Global.Game2)
             {
+                Global.countAlt = Global.countAlt + 1;
+
                 // Game 2
                 // check if the json file exists
                 if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasFile))
@@ -116,6 +112,7 @@ namespace Dewey_Decimal_System
 
                     // write data to the file
                     JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
+
                 }
                 else
                 {
@@ -145,7 +142,7 @@ namespace Dewey_Decimal_System
 
 
             // message to the user
-            MessageBox.Show(txbUsername.Text + "score of : "+txbFinalScore+" has been saved successfully", "Score Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(txbUsername.Text + "score of : " + txbFinalScore + " has been saved successfully", "Score Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // navigate back to the home screen
             RefreshUI();

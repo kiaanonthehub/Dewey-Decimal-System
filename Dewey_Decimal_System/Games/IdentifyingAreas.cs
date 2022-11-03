@@ -18,6 +18,7 @@ namespace Dewey_Decimal_System
     {
         static int count = 0;
 
+
         // instantiate object
         MatchingCallNosDescription matching = new MatchingCallNosDescription();
 
@@ -30,6 +31,36 @@ namespace Dewey_Decimal_System
         public IdentifyingAreas()
         {
             InitializeComponent();
+        }
+
+        private void Alternate(int count)
+        {
+            // instantiate random object
+            Random rnd = new Random();
+
+            int check = count % 2;
+
+
+            if (check == 0)
+            {
+                Global.isAltGame = true;
+
+                // populate list view
+                Global.lstCallNos.ToList().ForEach(x => lstboxCallNo.Items.Add(x));
+
+                // shuffled list again
+                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxDescription.Items.Add(x.Value));
+            }
+            else
+            {
+                Global.isAltGame = false;
+
+                // populate list view
+                Global.lstCallNos.ToList().ForEach(x => lstboxDescription.Items.Add(x));
+
+                // shuffled list again
+                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxCallNo.Items.Add(x.Value));
+            }
         }
 
         #region Button Check Answer
@@ -51,7 +82,7 @@ namespace Dewey_Decimal_System
                     description = lstboxDescription.SelectedItem.ToString();
 
                     // check ff the user has selected an item from the listbox
-                    if (matching.CheckAnswer(callNumber, description))
+                    if (matching.CheckAnswer(callNumber, description,Global.isAltGame))
                     {
                         // if the matching pair is correct remove it from the listbox 
                         lstboxCallNo.Items.RemoveAt(lstboxCallNo.SelectedIndex);
@@ -132,15 +163,9 @@ namespace Dewey_Decimal_System
             Global.lstDescription = matching.GetDescription();
             Global.lstCallNos = matching.GetCallNos();
 
-            // instantiate random object
-            Random rnd = new Random();
-
-            // populate list view
-            Global.lstCallNos.ToList().ForEach(x => lstboxCallNo.Items.Add(x));
-
-            // shuffled list again
-            Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxDescription.Items.Add(x.Value));
-
+            // alternate displays
+            Alternate(Global.countAlt);
+            
             // initialise game start to false
             gameBegin = false;
 
@@ -230,5 +255,6 @@ namespace Dewey_Decimal_System
                 scoreAndDetails.Show();
             }
         }
+
     }
 }
