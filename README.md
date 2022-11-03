@@ -88,6 +88,7 @@ After using the training software, the user must be able to:
 
 ## Links
 Task 1 Video Presentation (https://youtu.be/VcTeVgUjbuY)
+Task 2 Video Presentation (https://www.youtube.com/watch?v=hzfGaSsPjNQ)
 ---
 
 ## Contact
