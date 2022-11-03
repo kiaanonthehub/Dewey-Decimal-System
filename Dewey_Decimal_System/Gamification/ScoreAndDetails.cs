@@ -142,7 +142,7 @@ namespace Dewey_Decimal_System
 
 
             // message to the user
-            MessageBox.Show(txbUsername.Text + "score of : " + txbFinalScore + " has been saved successfully", "Score Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(txbUsername.Text + "score of : " + txbFinalScore.Text + " has been saved successfully", "Score Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // navigate back to the home screen
             RefreshUI();

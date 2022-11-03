@@ -63,7 +63,7 @@
             this.lstboxDescription.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lstboxDescription.FormattingEnabled = true;
             this.lstboxDescription.ItemHeight = 25;
-            this.lstboxDescription.Location = new System.Drawing.Point(328, 79);
+            this.lstboxDescription.Location = new System.Drawing.Point(83, 79);
             this.lstboxDescription.Name = "lstboxDescription";
             this.lstboxDescription.Size = new System.Drawing.Size(320, 279);
             this.lstboxDescription.TabIndex = 5;
@@ -74,9 +74,9 @@
             this.lstboxCallNo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lstboxCallNo.FormattingEnabled = true;
             this.lstboxCallNo.ItemHeight = 30;
-            this.lstboxCallNo.Location = new System.Drawing.Point(179, 81);
+            this.lstboxCallNo.Location = new System.Drawing.Point(409, 82);
             this.lstboxCallNo.Name = "lstboxCallNo";
-            this.lstboxCallNo.Size = new System.Drawing.Size(143, 274);
+            this.lstboxCallNo.Size = new System.Drawing.Size(320, 274);
             this.lstboxCallNo.TabIndex = 4;
             this.lstboxCallNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstboxCallNo_MouseDown);
             // 

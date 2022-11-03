@@ -33,35 +33,6 @@ namespace Dewey_Decimal_System
             InitializeComponent();
         }
 
-        private void Alternate(int count)
-        {
-            // instantiate random object
-            Random rnd = new Random();
-
-            int check = count % 2;
-
-
-            if (check == 0)
-            {
-                Global.isAltGame = true;
-
-                // populate list view
-                Global.lstCallNos.ToList().ForEach(x => lstboxCallNo.Items.Add(x));
-
-                // shuffled list again
-                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxDescription.Items.Add(x.Value));
-            }
-            else
-            {
-                Global.isAltGame = false;
-
-                // populate list view
-                Global.lstCallNos.ToList().ForEach(x => lstboxDescription.Items.Add(x));
-
-                // shuffled list again
-                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxCallNo.Items.Add(x.Value));
-            }
-        }
 
         #region Button Check Answer
         private void btnCheckAnswer_Click(object sender, EventArgs e)
@@ -192,6 +163,35 @@ namespace Dewey_Decimal_System
         {
             lstboxCallNo.ClearSelected();
             lstboxDescription.ClearSelected();
+        }
+        private void Alternate(int count)
+        {
+            // instantiate random object
+            Random rnd = new Random();
+
+            int check = count % 2;
+
+
+            if (check == 0)
+            {
+                Global.isAltGame = true;
+
+                // populate list view
+                Global.lstCallNos.ToList().ForEach(x => lstboxCallNo.Items.Add(x));
+
+                // shuffled list again
+                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxDescription.Items.Add(x.Value));
+            }
+            else
+            {
+                Global.isAltGame = false;
+
+                // populate list view
+                Global.lstCallNos.ToList().ForEach(x => lstboxDescription.Items.Add(x));
+
+                // shuffled list again
+                Global.lstDescription.ToList().OrderBy(x => rnd.Next()).ToList().ForEach(x => lstboxCallNo.Items.Add(x.Value));
+            }
         }
         #endregion
 
