@@ -136,6 +136,7 @@
             this.Controls.Add(this.btnChoice2);
             this.Controls.Add(this.btnChoice1);
             this.Name = "FindingCallNumbers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FindingCallNumbers";
             this.Load += new System.EventHandler(this.FindingCallNumbers_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FindingCallNumbers_MouseMove);

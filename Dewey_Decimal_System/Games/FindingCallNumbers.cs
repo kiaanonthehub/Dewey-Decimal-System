@@ -51,6 +51,7 @@ namespace Dewey_Decimal_System.Games
             Global.Game2 = false;
             Global.Game3 = true;
 
+
             // show timer
             lblTimer.Show();
 
@@ -156,10 +157,10 @@ namespace Dewey_Decimal_System.Games
         // method to initialise ui components back to default
         private void RefreshUI()
         {
-            btnChoice1.Text = "";
-            btnChoice2.Text = "";
-            btnChoice3.Text = "";
-            btnChoice4.Text = "";
+            btnChoice1.Text = "Game";
+            btnChoice2.Text = "Completed";
+            btnChoice3.Text = "Please";
+            btnChoice4.Text = "Wait...";
         }
         #endregion
 
@@ -231,24 +232,15 @@ namespace Dewey_Decimal_System.Games
                     // stop timer
                     timer.Pause();
 
-                    // for next game to be played
-                    lvl1 = true;
-                    lvl2 = false;
-                    lvl3 = false;
-                    timer.Pause();
-                    lblTimer.Text = timer.TimeLeftStr;
-                    lblTimer.Hide();
-                    RefreshUI();
-
                     // update the users score
                     updatedScore();
                 }
-                //else
-                //{
-                //    // end game
+                else
+                {
+                    // end game
                     RefreshUI();
                     EndGame();
-                //}
+                }
             }
         }
         #endregion
@@ -278,6 +270,13 @@ namespace Dewey_Decimal_System.Games
         {
             // stop timer
             timer.Pause();
+
+            // for next game to be played
+            lvl1 = true;
+            lvl2 = false;
+            lvl3 = false;
+            lblTimer.Hide();
+            RefreshUI();
 
             // save the score 
             Global.Points = ScoreSystem.CalculateScore(Convert.ToInt32(timer.TimeLeft.Seconds));
