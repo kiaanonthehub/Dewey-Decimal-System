@@ -51,7 +51,6 @@ namespace DeweyDecimalLibrary.Tree_Structure
             dps.AddChildren(l800, l1[7]);
             #endregion
 
-
             #region LEVEL 3
             dps.AddChildren(Metaphysics(), l100[0]);
             dps.AddChildren(ParanormalPhenomena(), l100[1]);
@@ -81,9 +80,6 @@ namespace DeweyDecimalLibrary.Tree_Structure
             #endregion
 
             dps.LevelOrderTraversal(dps.Root);
-
-
-           // Console.WriteLine($"ORIGINAL TREE SIZE {dps.Size}");
 
             return dps;
         }

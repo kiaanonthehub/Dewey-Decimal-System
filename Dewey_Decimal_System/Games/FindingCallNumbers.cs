@@ -191,9 +191,9 @@ namespace Dewey_Decimal_System.Games
                 else
                 {
                     // end game
-                    MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //RefreshUI();
-                    //EndGame();
+                    //MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    RefreshUI();
+                    EndGame();
                 }
             }
             else if (lvl2)
@@ -213,9 +213,9 @@ namespace Dewey_Decimal_System.Games
                 else
                 {
                     // end game
-                    MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //RefreshUI();
-                    //EndGame();
+                    //MessageBox.Show("Incorrect choice , Please try again", "Invalid Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    RefreshUI();
+                    EndGame();
                 }
 
 
@@ -246,8 +246,8 @@ namespace Dewey_Decimal_System.Games
                 //else
                 //{
                 //    // end game
-                //    RefreshUI();
-                //    EndGame();
+                    RefreshUI();
+                    EndGame();
                 //}
             }
         }

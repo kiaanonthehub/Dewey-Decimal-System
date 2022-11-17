@@ -71,7 +71,14 @@ namespace Dewey_Decimal_System
 
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
-            Global.Username = txbUsername.Text;
+            if (txbUsername.Text == null)
+            {
+
+            }
+            else
+            {
+
+            }
 
             // instantiate high score model 
             ModelHighScore modelHighScore = new ModelHighScore();

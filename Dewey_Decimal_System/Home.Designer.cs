@@ -101,7 +101,6 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Bisque;
-            this.button3.Enabled = false;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(534, 383);
@@ -115,7 +114,6 @@
             // btnFindingCallNumbers
             // 
             this.btnFindingCallNumbers.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnFindingCallNumbers.Enabled = false;
             this.btnFindingCallNumbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindingCallNumbers.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFindingCallNumbers.ForeColor = System.Drawing.Color.Black;
