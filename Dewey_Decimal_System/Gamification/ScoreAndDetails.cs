@@ -73,91 +73,89 @@ namespace Dewey_Decimal_System
         {
             if (txbUsername.Text == null)
             {
-
+                MessageBox.Show("Please enter a valid name", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                // instantiate high score model 
+                ModelHighScore modelHighScore = new ModelHighScore();
 
+                // score
+                modelHighScore.Score = Global.Points + Global.BonusPoints;
+
+                modelHighScore.Username = Global.Username;
+
+                if (Global.Game1)
+                {
+                    // Game 1
+                    // check if the json file exists
+                    if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
+                    {
+                        // create the json file
+                        JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
+
+                        // write data to the file
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                    }
+                    else
+                    {
+                        // write to json
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
+                    }
+                }
+                else if (Global.Game2)
+                {
+                    Global.countAlt = Global.countAlt + 1;
+
+                    // Game 2
+                    // check if the json file exists
+                    if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasFile))
+                    {
+                        // create the json file
+                        JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasFile);
+
+                        // write data to the file
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
+
+                    }
+                    else
+                    {
+                        // write to json
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
+                    }
+
+                }
+                else if (Global.Game3)
+                {
+                    // Game 3
+                    // check if the json file exists
+                    if (!JsonFileUtility.FileExists(JsonFileUtility.TreeHighScoreFile))
+                    {
+                        // create the json file
+                        JsonFileUtility.CreateJsonFile(JsonFileUtility.TreeHighScoreFile);
+
+                        // write data to the file
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
+                    }
+                    else
+                    {
+                        // write to json
+                        JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
+                    }
+                }
+
+
+                // message to the user
+                MessageBox.Show(txbUsername.Text + "score of : " + txbFinalScore.Text + " has been saved successfully", "Score Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // navigate back to the home screen
+                RefreshUI();
+
+                // back to home page
+                Home home = new Home();
+                this.Hide();
+                home.Show();
             }
-
-            // instantiate high score model 
-            ModelHighScore modelHighScore = new ModelHighScore();
-
-            // score
-            modelHighScore.Score = Global.Points + Global.BonusPoints;
-
-            modelHighScore.Username = Global.Username;
-
-            if (Global.Game1)
-            {
-                // Game 1
-                // check if the json file exists
-                if (!JsonFileUtility.FileExists(JsonFileUtility.SortingCallNosFile))
-                {
-                    // create the json file
-                    JsonFileUtility.CreateJsonFile(JsonFileUtility.SortingCallNosFile);
-
-                    // write data to the file
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
-                }
-                else
-                {
-                    // write to json
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.SortingCallNosFile);
-                }
-            }
-            else if (Global.Game2)
-            {
-                Global.countAlt = Global.countAlt + 1;
-
-                // Game 2
-                // check if the json file exists
-                if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasFile))
-                {
-                    // create the json file
-                    JsonFileUtility.CreateJsonFile(JsonFileUtility.IdentifyingAreasFile);
-
-                    // write data to the file
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
-
-                }
-                else
-                {
-                    // write to json
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.IdentifyingAreasFile);
-                }
-
-            }
-            else if (Global.Game3)
-            {
-                // Game 3
-                // check if the json file exists
-                if (!JsonFileUtility.FileExists(JsonFileUtility.TreeHighScoreFile))
-                {
-                    // create the json file
-                    JsonFileUtility.CreateJsonFile(JsonFileUtility.TreeHighScoreFile);
-
-                    // write data to the file
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
-                }
-                else
-                {
-                    // write to json
-                    JsonFileUtility.AppendScores(modelHighScore, JsonFileUtility.TreeHighScoreFile);
-                }
-            }
-
-
-            // message to the user
-            MessageBox.Show(txbUsername.Text + "score of : " + txbFinalScore.Text + " has been saved successfully", "Score Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // navigate back to the home screen
-            RefreshUI();
-
-            // back to home page
-            Home home = new Home();
-            this.Hide();
-            home.Show();
         }
 
         private void ScoreAndDetails_FormClosed(object sender, FormClosedEventArgs e)
