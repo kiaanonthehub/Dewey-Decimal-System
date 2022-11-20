@@ -74,16 +74,16 @@ After using the training software, the user must be able to:
 -  Points System & Level Difficulty
 ---
 ## Final POE
--  Create a file containing the data that was gathered in the research part of this task in a format that your application can read.
--  Enable the Finding call numbers task.
--  When the user chooses Finding call numbers, the application must load the Dewey Decimal classification data into memory from the file created in Step 1.
-- The quiz must work as follows:
-- For each question, randomly select a third-level entry from the data, for example, 752 Color. Display only the description, not the call number.
-- Display four top-level options to the user to choose between, one of which must be the correct one and the other three randomly selected incorrect answers. For example: 000 General 400 Language 700 Arts & Recreation (Correct answer) 800 Literature
-- For the options, display both the call number and description. Display the options in numerical order by call number.
-- If the user selects the correct option, show them four options from the next level until the most detailed level is reached.
-e  If the user selects the wrong option anywhere along the way, indicate this and then ask the next question.
--  Implement a gamification feature to motivate users to keep using the application. You may use the same one as before or choose to implement a different one.
+1.  Create a file containing the data that was gathered in the research part of this task in a format that your application can read.  
+2.  Enable the Finding call numbers task.  
+3.  When the user chooses Finding call numbers, the application must load the Dewey Decimal classification data into memory from the file created in Step 1.  
+4.  The quiz must work as follows:  
+a.  For each question, randomly select a third-level entry from the data, for example, 752 Color. Display only the description, not the call number.  
+b.  Display four top-level options to the user to choose between, one of which must be the correct one and the other three randomly selected incorrect answers. For example: 000 General 400 Language 700 Arts & Recreation (Correct answer) 800 Literature  
+c. For the options, display both the call number and description. Display the options in numerical order by call number.  
+d. If the user selects the correct option, show them four options from the next level until the most detailed level is reached.  
+e. If the user selects the wrong option anywhere along the way, indicate this and then ask the next question.  
+5. Implement a gamification feature to motivate users to keep using the application. You may use the same one as before or choose to implement a different one.  
 
 ### Technical Requirements
 -  Store the call numbers and their descriptions in a dictionary.
