@@ -44,10 +44,10 @@ After using the training software, the user must be able to:
 ---
 
 ### Installation
-1. Download the file (FarmCentral_ST10116983.zip) or Clone the repository from GitHub
-2. Locate the downloaded file under your downloads in File Explorer. Right click on the file and select Extract All and set the location path to your desktop.
-3.  Then you would need to open the solution explorer and right click on the solution and select "Build". - This will copy the .dll files to the bin folder.
-4. Simplty there after press f5 on your keyboard to run the application.
+1.  Download the file (FarmCentral_ST10116983.zip) or Clone the repository from GitHub  
+2.  Locate the downloaded file under your downloads in File Explorer. Right click on the file and select Extract All and set the location path to your desktop.  
+3.  Then you would need to open the solution explorer and right click on the solution and select "Build". - This will copy the .dll files to the bin folder.  
+4.  Simplty there after press f5 on your keyboard to run the application.  
 ---
 
 ## Task 1
