@@ -77,7 +77,7 @@ After using the training software, the user must be able to:
 1.  Create a file containing the data that was gathered in the research part of this task in a format that your application can read.  
 2.  Enable the Finding call numbers task.  
 3.  When the user chooses Finding call numbers, the application must load the Dewey Decimal classification data into memory from the file created in Step 1.  
-4.  The quiz must work as follows:  
+4.  The quiz must work as follows:
 -  For each question, randomly select a third-level entry from the data, for example, 752 Color. Display only the description, not the call number.  
 -  Display four top-level options to the user to choose between, one of which must be the correct one and the other three randomly selected incorrect answers. For example: 000 General 400 Language 700 Arts & Recreation (Correct answer) 800 Literature  
 - For the options, display both the call number and description. Display the options in numerical order by call number.  
@@ -113,8 +113,8 @@ After using the training software, the user must be able to:
 ---
 
 ## Contact
--  Version No. 2.0.0
+-  Version No. 3.0.0
 -  Release Date: 21/09/2022
--  Updated on : 25/10/2022
+-  Updated on : 21/11/2022
 -  Author : Maharaj Kiaan
 -  Contact Detail : st10116983@vcconnect.edu.za
