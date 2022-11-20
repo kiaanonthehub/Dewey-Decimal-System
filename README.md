@@ -105,7 +105,12 @@ After using the training software, the user must be able to:
 -  Advanced UI Gestures – Drag and Drop feature
 -  Custom Countdown Timer Class
 ---
-
+## Notes
+-  Please note the score does not carry over if the user wishes to play again  
+-  The users score is based on a timer and difficulty selected  
+-  The user may save their score at any point in time and play again from startign at 0  
+-  Bonus points have been implemented , depending on the difficulty saved  
+---
 ## Links
 -  Task 1 Video Presentation (https://youtu.be/VcTeVgUjbuY)   
 -  Task 2 Video Presentation (https://www.youtube.com/watch?v=hzfGaSsPjNQ)
