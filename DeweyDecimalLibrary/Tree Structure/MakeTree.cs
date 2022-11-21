@@ -97,7 +97,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         // lists of call number categories and level childern
 
-        #region 100s
+        #region Philosophy & Psychology
         public static List<DeweyPair> Philosophy()
         {
             // instantiate list object
@@ -171,7 +171,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 200s
+        #region Religon
         public static List<DeweyPair> Religion()
         {
             // instantiate list object
@@ -182,7 +182,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 200s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> NaturalTheology()
         {
             // instantiate list object
@@ -200,7 +200,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 300s
+        #region Social Science
         public static List<DeweyPair> SocialScience()
         {
             // instantiate list object
@@ -213,7 +213,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 300s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> Economics()
         {
             // instantiate list object
@@ -247,7 +247,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 400s
+        #region Language
         public static List<DeweyPair> Language()
         {
             // instantiate list object
@@ -259,7 +259,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 400s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> Linguistics()
         {
             // instantiate list object
@@ -277,7 +277,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 500s
+        #region Natural Science and Mathematics
         public static List<DeweyPair> NaturalSciences()
         {
             // instantiate list object
@@ -290,7 +290,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 500s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> Mathematics()
         {
             // instantiate list object
@@ -324,7 +324,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 600s
+        #region Applied Sciences
         public static List<DeweyPair> AppliedSciences()
         {
             // instantiate list object
@@ -338,7 +338,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 600s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> Medicine()
         {
             // instantiate list object
@@ -385,7 +385,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 
         #endregion
 
-        #region 700s
+        #region Arts
         public static List<DeweyPair> Arts()
         {
             // instantiate list object
@@ -400,7 +400,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 700s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> CivicLandscapes()
         {
             // instantiate list object
@@ -459,7 +459,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
         #endregion
         #endregion
 
-        #region 800s
+        #region Literature
         public static List<DeweyPair> Literature()
         {
             // instantiate list object
@@ -471,7 +471,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             return lstPairs;
         }
 
-        #region 800s CHILDREN
+        #region Sub Category
         public static List<DeweyPair> AmericanLiterature()
         {
             // instantiate list object
