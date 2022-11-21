@@ -18,70 +18,70 @@ namespace DeweyDecimalLibrary.Logic
             TreeGameLevel level = new TreeGameLevel();
 
             //the path to the answer
-            List<DeweyPair> AnswerPath = GlobalTree.Tree.GetPathToRandom(GlobalTree.Tree.Root, 3);
+            List<DeweyPair> lstAnswerPath = GlobalTree.Tree.GetPathToRandom(GlobalTree.Tree.Root, 3);
 
             //incorrect options for each level
-            List<DeweyPair> L1Options = new List<DeweyPair>();
-            List<DeweyPair> L2Options = new List<DeweyPair>();
-            List<DeweyPair> L3Options = new List<DeweyPair>();
+            List<DeweyPair> lstIncorrectChoice1 = new List<DeweyPair>();
+            List<DeweyPair> lstIncorrectChoice2 = new List<DeweyPair>();
+            List<DeweyPair> lstIncorrectChoice3 = new List<DeweyPair>();
 
 
             //gets options for the first level
-            while (L1Options.Count < 3)
+            while (lstIncorrectChoice1.Count < 3)
             {
                 DeweyPair r = GlobalTree.Tree.GetRandom(1);
 
-                if (!AnswerPath.Contains(r) && !L1Options.Contains(r))
+                if (!lstAnswerPath.Contains(r) && !lstIncorrectChoice1.Contains(r))
                 {
-                    L1Options.Add(r);
+                    lstIncorrectChoice1.Add(r);
                 }
             }
 
             //gets the children of the first level
-            L2Options = GlobalTree.Tree.GetChildren(AnswerPath[0]);
+            lstIncorrectChoice2 = GlobalTree.Tree.GetChildren(lstAnswerPath[0]);
 
             //removes the correct option from the list of children
-            if (L2Options.Remove(AnswerPath[1]))
+            if (lstIncorrectChoice2.Remove(lstAnswerPath[1]))
             {
                 Console.WriteLine("Removed Answer");
             }
 
             //if there are 3 or more children for a single level
-            while (L2Options.Count > 3)
+            while (lstIncorrectChoice2.Count > 3)
             {
                 //pick random from the children
                 Random r = new Random();
 
-                int index = r.Next(L2Options.Count);
+                int index = r.Next(lstIncorrectChoice2.Count);
 
-                L2Options.RemoveAt(index);
+                lstIncorrectChoice2.RemoveAt(index);
             }
 
 
             //gets options for second level, if there are not enough children
-            while (L2Options.Count < 3)
+            while (lstIncorrectChoice2.Count < 3)
             {
                 DeweyPair r = GlobalTree.Tree.GetRandom(2);
 
-                if (!AnswerPath.Contains(r) && !L2Options.Contains(r))
+                if (!lstAnswerPath.Contains(r) && !lstIncorrectChoice2.Contains(r))
                 {
-                    L2Options.Add(r);
+                    lstIncorrectChoice2.Add(r);
                 }
             }
 
             //gets the children of the second level to have similar numbers in the third
-            List<DeweyPair> children = GlobalTree.Tree.GetChildren(AnswerPath[1]);
+            List<DeweyPair> children = GlobalTree.Tree.GetChildren(lstAnswerPath[1]);
 
             //gets options for third level
-            while (L3Options.Count < 3)
+            while (lstIncorrectChoice3.Count < 3)
             {
                 Random r = new Random();
 
                 int index = r.Next(children.Count);
 
-                if (!AnswerPath.Contains(children[index]) && !L3Options.Contains(children[index]))
+                if (!lstAnswerPath.Contains(children[index]) && !lstIncorrectChoice3.Contains(children[index]))
                 {
-                    L3Options.Add(children[index]);
+                    lstIncorrectChoice3.Add(children[index]);
                 }
             }
 
@@ -92,14 +92,14 @@ namespace DeweyDecimalLibrary.Logic
             List<DeweyPairGameModel> ans = new List<DeweyPairGameModel>();
 
             //converts data models to game models
-            ans = GameConverter.DeweyPairListToGameModel(AnswerPath);
+            ans = GameConverter.DeweyPairListToGameModel(lstAnswerPath);
             ans.ForEach(x => x.Correct = true);
 
-            l1 = GameConverter.DeweyPairListToGameModel(L1Options);
+            l1 = GameConverter.DeweyPairListToGameModel(lstIncorrectChoice1);
             l1.ForEach(x => x.Correct = false);
-            l2 = GameConverter.DeweyPairListToGameModel(L2Options);
+            l2 = GameConverter.DeweyPairListToGameModel(lstIncorrectChoice2);
             l2.ForEach(x => x.Correct = false);
-            l3 = GameConverter.DeweyPairListToGameModel(L3Options);
+            l3 = GameConverter.DeweyPairListToGameModel(lstIncorrectChoice3);
             l3.ForEach(x => x.Correct = false);
 
             //adds correct answers to options lists
