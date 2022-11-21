@@ -71,6 +71,7 @@ namespace Dewey_Decimal_System
 
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
+            // error handling
             if (txbUsername.Text == null)
             {
                 MessageBox.Show("Please enter a valid name", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
