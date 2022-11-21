@@ -6,6 +6,7 @@ namespace DeweyDecimalLibrary.Logic
 {
     public class FindingCallNos
     {
+        #region Set the game Level
         // uses gets all the required information for a level from the tree
         public TreeGameLevel GetLevel()
         {
@@ -115,5 +116,6 @@ namespace DeweyDecimalLibrary.Logic
 
             return level;
         }
+    #endregion
     }
 }

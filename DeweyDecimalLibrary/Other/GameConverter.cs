@@ -9,6 +9,7 @@ namespace DeweyDecimalLibrary.Other
 {
     public class GameConverter
     {
+        
         public static DeweyPairGameModel ConvertToGameModel(DeweyPair deweyPair)
         {
             return new DeweyPairGameModel { Number = deweyPair.Number, Description = deweyPair.Description };

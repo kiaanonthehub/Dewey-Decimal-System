@@ -67,7 +67,7 @@
         }
 
         /*
-         * This method used to add a list of childrent to the binary tree stucture
+         * This method used to add a list of children to the binary tree stucture
          */
         public void AddChildren(List<T> lstChildren, T ParentData)
         {
@@ -95,7 +95,11 @@
             return PathToRandom(Start, 0, lstPath, limit);
         }
 
-
+        /*
+         * Gets the path to the randomly generated answer for level 3 ,2 and 1 
+         * This is used to check if the users answer is correct for each stage of the game 
+         * https://www.geeksforgeeks.org/print-path-between-any-two-nodes-in-a-binary-tree/
+         */
         private List<T> PathToRandom(TreeNode<T> Start, int count, List<T> path, int limit)
         {
             if (Start.Children.Count < 1)
@@ -127,6 +131,8 @@
 
         /* 
          * picks a Random value from a specified level
+         * similar source code : Select a Random Node from a tree with equal probability
+         * https://www.geeksforgeeks.org/select-random-node-tree-equal-probability/
          */
         public T GetRandom(int level)
         {
@@ -145,6 +151,7 @@
 
         /* 
          * gets the children of a specified parent
+         * https://stackoverflow.com/questions/43774655/how-can-i-get-the-parent-in-binary-tree
          */
         public List<T> GetChildren(T Parent)
         {
