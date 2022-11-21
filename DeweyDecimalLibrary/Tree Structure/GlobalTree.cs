@@ -9,6 +9,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
 {
     public class GlobalTree
     {
+        // static class 
         public static Tree<DeweyPair> Tree { get; set; }
     }
 }

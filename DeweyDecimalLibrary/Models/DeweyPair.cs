@@ -8,14 +8,17 @@ namespace DeweyDecimalLibrary.Models
 {
     public class DeweyPair : IComparable<DeweyPair>
     {
+        // properties
         public string Number { get; set; }
         public string Description { get; set; }
 
+        // constructor
         public DeweyPair()
         {
 
         }
 
+        // implementation
         public int CompareTo(DeweyPair other)
         {
             return this.Number.CompareTo(other.Number);

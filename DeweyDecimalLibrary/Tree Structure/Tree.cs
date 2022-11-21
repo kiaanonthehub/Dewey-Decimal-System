@@ -2,17 +2,25 @@
 {
     public class Tree<T> where T : IComparable<T>
     {
+        // class properties
         public TreeNode<T> Root { get; set; }
         public int Size { get; set; }
 
+        // constructor
         public Tree() { }
 
+        // overloaded constructor
         public Tree(T Data)
         {
             Root = new TreeNode<T>(Data);
             Size++;
         }
 
+        /*
+         *  Inorder traversal gives nodes in non-decreasing order. 
+         *  To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal is reversed can be used. 
+         *  https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+         */
         public void OrderTraversal(TreeNode<T> Start)
         {
             Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
@@ -31,6 +39,11 @@
             }
         }
 
+        /*
+         *Given a Binary tree and a node. 
+         *This method is used to search and check if the given node exists in the binary tree or not.
+         *https://www.geeksforgeeks.org/search-a-node-in-binary-tree/
+         */
         public TreeNode<T> SearchThrough(T Data)
         {
             Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
@@ -53,6 +66,9 @@
             return null;
         }
 
+        /*
+         * This method used to add a list of childrent to the binary tree stucture
+         */
         public void AddChildren(List<T> lstChildren, T ParentData)
         {
             TreeNode<T> Parent = SearchThrough(ParentData);
@@ -70,12 +86,15 @@
                 }
             }
         }
-        // gets a lstPath to a random node at a specified level
+        /*
+         * gets a lstPath to a random node at a specified level
+         */
         public List<T> GetPathToRandom(TreeNode<T> Start, int limit)
         {
             List<T> lstPath = new List<T>();
             return PathToRandom(Start, 0, lstPath, limit);
         }
+
 
         private List<T> PathToRandom(TreeNode<T> Start, int count, List<T> path, int limit)
         {
@@ -106,7 +125,9 @@
         }
 
 
-        // picks a Random value from a specified level
+        /* 
+         * picks a Random value from a specified level
+         */
         public T GetRandom(int level)
         {
             TreeNode<T> current = Root;
@@ -122,7 +143,9 @@
             return current.Data;
         }
 
-        // gets the children of a specified parent
+        /* 
+         * gets the children of a specified parent
+         */
         public List<T> GetChildren(T Parent)
         {
             TreeNode<T> p = SearchThrough(Parent);
