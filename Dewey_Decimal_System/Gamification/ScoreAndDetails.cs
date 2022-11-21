@@ -83,6 +83,8 @@ namespace Dewey_Decimal_System
                 // score
                 modelHighScore.Score = Global.Points + Global.BonusPoints;
 
+                Global.Username = txbUsername.Text;
+
                 modelHighScore.Username = Global.Username;
 
                 if (Global.Game1)
