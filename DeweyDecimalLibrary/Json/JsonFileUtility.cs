@@ -173,7 +173,7 @@ namespace DeweyDecimalLibrary.Json
         public static void CreateTreeDataFile()
         {
             //gets a tree from the generator file
-            Tree<DeweyPair> tree = TreeGenerator.PlantTree();
+            Tree<DeweyPair> tree = MakeTree.GrowATree();
 
             //well, this file cant be a one liner, for the sake of my sanity
             JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };

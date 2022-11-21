@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DeweyDecimalLibrary.Tree_Structure
 {
-    public class TreeGenerator
+    public class MakeTree
     {
-        public static Tree<DeweyPair> PlantTree()
+        public static Tree<DeweyPair> GrowATree()
         {
             DeweyPair basePair = new DeweyPair { Number = "---", Description = "ROOT" };
 
@@ -79,7 +79,7 @@ namespace DeweyDecimalLibrary.Tree_Structure
             dps.AddChildren(AmericanLiterature(), l800[0]);
             #endregion
 
-            dps.LevelOrderTraversal(dps.Root);
+            dps.OrderTraversal(dps.Root);
 
             return dps;
         }

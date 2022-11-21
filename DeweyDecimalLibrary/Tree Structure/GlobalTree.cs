@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DeweyDecimalLibrary.Tree_Structure
 {
-    public class TreeHolder
+    public class GlobalTree
     {
         public static Tree<DeweyPair> Tree { get; set; }
     }

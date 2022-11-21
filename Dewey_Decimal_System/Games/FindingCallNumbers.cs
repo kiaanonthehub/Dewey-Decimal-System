@@ -96,9 +96,9 @@ namespace Dewey_Decimal_System.Games
             }
 
             //loads the tree to a static value, better than reading the tree file every single time
-            if (TreeHolder.Tree == null)
+            if (GlobalTree.Tree == null)
             {
-                TreeHolder.Tree = JsonFileUtility.GetTree();
+                GlobalTree.Tree = JsonFileUtility.GetTree();
             }
         }
         #endregion

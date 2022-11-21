@@ -18,7 +18,7 @@ namespace DeweyDecimalLibrary.Logic
             TreeGameLevel level = new TreeGameLevel();
 
             //the path to the answer
-            List<DeweyPair> AnswerPath = TreeHolder.Tree.GetPathToRandom(TreeHolder.Tree.Root, 3);
+            List<DeweyPair> AnswerPath = GlobalTree.Tree.GetPathToRandom(GlobalTree.Tree.Root, 3);
 
             //incorrect options for each level
             List<DeweyPair> L1Options = new List<DeweyPair>();
@@ -29,7 +29,7 @@ namespace DeweyDecimalLibrary.Logic
             //gets options for the first level
             while (L1Options.Count < 3)
             {
-                DeweyPair r = TreeHolder.Tree.PickRandom(1);
+                DeweyPair r = GlobalTree.Tree.GetRandom(1);
 
                 if (!AnswerPath.Contains(r) && !L1Options.Contains(r))
                 {
@@ -38,7 +38,7 @@ namespace DeweyDecimalLibrary.Logic
             }
 
             //gets the children of the first level
-            L2Options = TreeHolder.Tree.GetChildren(AnswerPath[0]);
+            L2Options = GlobalTree.Tree.GetChildren(AnswerPath[0]);
 
             //removes the correct option from the list of children
             if (L2Options.Remove(AnswerPath[1]))
@@ -61,7 +61,7 @@ namespace DeweyDecimalLibrary.Logic
             //gets options for second level, if there are not enough children
             while (L2Options.Count < 3)
             {
-                DeweyPair r = TreeHolder.Tree.PickRandom(2);
+                DeweyPair r = GlobalTree.Tree.GetRandom(2);
 
                 if (!AnswerPath.Contains(r) && !L2Options.Contains(r))
                 {
@@ -70,7 +70,7 @@ namespace DeweyDecimalLibrary.Logic
             }
 
             //gets the children of the second level to have similar numbers in the third
-            List<DeweyPair> children = TreeHolder.Tree.GetChildren(AnswerPath[1]);
+            List<DeweyPair> children = GlobalTree.Tree.GetChildren(AnswerPath[1]);
 
             //gets options for third level
             while (L3Options.Count < 3)
