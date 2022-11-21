@@ -16,30 +16,10 @@ namespace DeweyDecimalLibrary.Models
 
         }
 
-        public override string ToString()
-        {
-            return Number;
-        }
-
         public int CompareTo(DeweyPair other)
         {
             return this.Number.CompareTo(other.Number);
         }
 
-        public override bool Equals(object obj)
-        {
-            if (obj is DeweyPair)
-            {
-                DeweyPair o = (DeweyPair)obj;
-                return this.Number.Equals(o.Number);
-            }
-
-            return base.Equals(obj);
-        }
-
-        public bool Equals(DeweyPair obj)
-        {
-            return this.Number.Equals(obj.Number);
-        }
     }
 }
