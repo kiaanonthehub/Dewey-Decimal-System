@@ -30,10 +30,11 @@ namespace Dewey_Decimal_System
             }  
             
             // check if the json file exists
-            if (!JsonFileUtility.FileExists(JsonFileUtility.IdentifyingAreasCallNo))
+            if (!JsonFileUtility.FileExists(JsonFileUtility.TreeHighScoreFile))
             {
                 // create the json file
                 JsonFileUtility.CreateCallNumFile();
+                JsonFileUtility.CreateJsonFile(JsonFileUtility.TreeHighScoreFile);
             }
 
             Console.WriteLine(Global.Game1);
